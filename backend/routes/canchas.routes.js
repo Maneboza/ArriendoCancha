@@ -6,3 +6,4 @@ module.exports = (app) => {
     app.put("/canchas/actualizar/:canchasId", canchasController.actualizarCanchas);
     app.get("/canchas/detalle/:canchasId", canchasController.detalleCanchas);
 }
+

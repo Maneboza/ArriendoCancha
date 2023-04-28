@@ -21,7 +21,6 @@ const UsuariosSchema = new mongoose.Schema({
 
     telefono: {
         type: Number,
-       
     },
 
     rut: {
@@ -35,8 +34,7 @@ const UsuariosSchema = new mongoose.Schema({
         minlength: [8, "Debe tener un mínimo de 8 caracateres"]
     },
 
-  
-});
+}, {timestamps: true});
 
 const Usuarios = mongoose.model("usuarios", UsuariosSchema);
 module.exports = Usuarios;

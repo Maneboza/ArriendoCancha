@@ -2,10 +2,13 @@ const mongoose = require("mongoose");
 
 const ReservasSchema = new mongoose.Schema({
 	idCancha: {
-		type: Number,
+		type: String,
 		required: true
 	},
-
+    idProfesor: {
+		type: String,
+		required: true
+	},
 	hora: {
 		type: String
 	},
@@ -17,7 +20,6 @@ const ReservasSchema = new mongoose.Schema({
 	mes: {
 		type: String
 	},
-
 
 });
 
