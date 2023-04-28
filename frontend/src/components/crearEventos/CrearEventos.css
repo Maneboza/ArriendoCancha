@@ -1,0 +1,21 @@
+.CrearEventos {
+    background-image: url(PUNK-ROCK-THE-MAKING_COVER_main.jpg);
+    background-color: black;
+}
+
+h4 {
+    margin-top: 2rem;
+    padding: 2rem
+}
+
+button {
+    
+    background-color:black;
+    color:aliceblue;
+    border-radius: 3px;
+    font-size: 1.3rem;    
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
