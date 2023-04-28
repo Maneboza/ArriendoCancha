@@ -14,8 +14,12 @@ const ProfesoresSchema = new mongoose.Schema({
         type: String,
     },
 
-    horarios: {
-        type: Number,
+    horarioInicio: {
+        type: String,
+    },
+
+    horarioFin: {
+        type: String,
     },
 
     recomendacion: {
