@@ -1,4 +1,4 @@
-const CanchasModel = require("../models/canchas");
+//const ReservasModel = require("../models/reservas.models");
 const {Router} = require('express')
 
 const router = Router()
@@ -7,33 +7,33 @@ router.get('/', (req, res) => {
   res.json({message: 'Saludos desde el Servidor'}) 
 })
 
-module.exports.listarCanchas = async (request, response) => {
-    var result = await CanchasModel.find();
-    response.json(result);
-}
+// module.exports.listarCalendario = async (request, response) => {
+//     const reserva = await ReservasModel.find(request.query);
+//     return response.json(reserva );
+// }
 
-module.exports.crearCanchas = async (request, response) => {
-    var data = request.body;
+// module.exports.crearReservas = async (request, response) => {
+//     var data = request.body;
     
-    var nuevoCanchas = new CanchasModel(data);
-    var result = await nuevoCanchas.save();
+//     var nuevoReservas = new ReservasModel(data);
+//     var result = await nuevoReservas.save();
 
-    response.json(result);
-}
+//     response.json(result);
+// }
 
-module.exports.actualizarCanchas = async (request, response) => {
-    var id = request.params.canchasId;
-    var data = request.body;
+// module.exports.actualizarReservas = async (request, response) => {
+//     var id = request.params.reservasId;
+//     var data = request.body;
 
-    await CanchasModel.findOneAndUpdate({"_id": id}, data);
+//     await ReservasModel.findOneAndUpdate({"_id": id}, data);
 
-    response.json({
-        "status": "ok"
-    });
-}
+//     response.json({
+//         "status": "ok"
+//     });
+// }
 
-module.exports.detalleCanchas = async (request, response) => {
-    var id = request.params.profesoresId;
-    var canchas = await CanchasModel.findOne({_id: id});
-    response.json(canchas);
-}
+// module.exports.detalleReservas = async (request, response) => {
+//     var id = request.params.reservasId;
+//     var reservas = await ReservasModel.findOne({_id: id});
+//     response.json(reservas);
+// }
