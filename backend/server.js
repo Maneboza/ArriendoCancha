@@ -1,5 +1,4 @@
 const express = require("express");
-
 const mongoose = require("mongoose");  
 
 // const AdminJS = require('adminjs');
@@ -18,7 +17,6 @@ const mongoose = require("mongoose");
 
 // npm install adminjs @adminjs/express @adminjs/mongoose tslib express-formidable express-session
 
-
 mongoose.connect("mongodb://0.0.0.0:27017/Clubensignabd", {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -27,8 +25,6 @@ mongoose.connect("mongodb://0.0.0.0:27017/Clubensignabd", {
     console.log("Hubo un error al conectarse a la bd")
     console.log(err)
 });
-
-
 
 
 const app = express();
@@ -43,9 +39,6 @@ app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Credentials', true);
     next();
 });
-
-
-
 
 app.listen(8000, () => {
     console.log("Listening at Port 8000")

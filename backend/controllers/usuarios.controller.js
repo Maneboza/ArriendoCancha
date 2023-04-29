@@ -5,10 +5,6 @@ const {Router} = require('express')
 
 const router = Router()
 
-// router.get('/', (req, res) => {
-//     res.json({message: 'Saludos desde el Servidor'}) 
-// })
-
 module.exports.index = (request, response) => {
     response.json({
         message: "Hello World"
