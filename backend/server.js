@@ -26,11 +26,18 @@ mongoose.connect("mongodb://0.0.0.0:27017/Clubensignabd", {
     console.log(err)
 });
 
-
 const app = express();
 app.use(express.json());
 require('./routes/usuarios.routes')(app);
 
+const ReservaCanchaRoutes = require('./routes/reservacancha.routes');
+ReservaCanchaRoutes(app);
+
+const ReservaClaseRoutes = require('./routes/reservaclase.routes');
+ReservaClaseRoutes(app);
+
+const ProfesoresRoutes = require('./routes/profesores.routes');
+ProfesoresRoutes(app);
 
 app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');

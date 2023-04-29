@@ -1,8 +1,5 @@
 const UsuariosModel =  require("../models/usuarios.models");
-
-
 const {Router} = require('express')
-
 const router = Router()
 
 module.exports.index = (request, response) => {
@@ -13,7 +10,6 @@ module.exports.index = (request, response) => {
 
 module.exports.crearUsuario = async (request, response) => {
     var requestData = request.body;
-
     try {
         var newUser = await UsuariosModel.create(requestData);    
         response.json(newUser);
@@ -30,14 +26,11 @@ module.exports.encontrarUsuarioId = async (request, response) => {
     response.json(usuarioEncontrado);
 }
 
-// module.exports.loginUsuario = async (request, response) => {
-//     var requestBody = request.body;
-
-//     var usuarioEncontrado = await UsuariosModel.findOne({ email: "boza.marion@gmail.com", password: "12345678" });
-
-//     console.log(usuarioEncontrado);
-
-//     response.json({
-//         "status": "ok"
-//     });
-// }
+module.exports.loginUsuario = async (request, response) => {
+    var requestBody = request.body;
+    var usuarioEncontrado = await UsuariosModel.findOne({ email: "boza.marion@gmail.com", password: "12345678" });
+    console.log(usuarioEncontrado);
+    response.json({
+        "status": "ok"
+    });
+}

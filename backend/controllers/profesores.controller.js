@@ -1,39 +1,25 @@
-// const ProfesoresModel = require("../models/profesores.models");
-// const {Router} = require('express')
+const ProfesoresModel = require("../models/profesores.models");
 
-// const router = Router()
+module.exports.listarProfesores = async (request, response) => {
+    var result = await ProfesoresModel.find();
+    response.json(result);
+}
 
-// router.get('/', (req, res) => {
-//   res.json({message: 'Saludos desde el Servidor'}) 
-// })
+module.exports.crearProfesores = async (request, response) => {
+    var requestData = request.body;
 
-// module.exports.listarProfesores = async (request, response) => {
-//     var result = await ProfesoresModel.find();
-//     response.json(result);
-// }
+    try {
+        var newProfesores = await ProfesoresModel.create(requestData);
+        response.json(newProfesores);
+    } catch(error) {
+        console.log("no se pudo crear el usuario", error)
+        response.json(error);
+    }
+}
 
-// module.exports.crearProfesores = async (request, response) => {
-//     var data = request.body;
-    
-//     var nuevoProfesores = new ProfesoresModel(data);
-//     var result = await nuevoProfesores.save();
-
-//     response.json(result);
-// }
-
-// module.exports.actualizarProfesores = async (request, response) => {
-//     var id = request.params.profesoresId;
-//     var data = request.body;
-
-//     await ProfesoresModel.findOneAndUpdate({"_id": id}, data);
-
-//     response.json({
-//         "status": "ok"
-//     });
-// }
-
-// module.exports.detalleProfesores = async (request, response) => {
-//     var id = request.params.profesoresId;
-//     var profesores = await ProfesoresModel.findOne({_id: id});
-//     response.json(profesores);
-// }
+module.exports.detalleProfesores = async (request, response) => {
+    const id = request.params.id;
+    const usuarioEncontrado = await ProfesoresModel.findById({ _id: id });
+    console.log("usuario encontrado");
+    response.json(usuarioEncontrado);
+}

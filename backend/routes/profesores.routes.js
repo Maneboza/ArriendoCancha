@@ -1,6 +1,7 @@
 const ProfesoresController = require("../controllers/profesores.controller");
 
 module.exports = (app) => {
-    app.get("/reserva/profesor", ProfesoresController.listarProfesores);
-    app.get("/reserva/cancha", ProfesoresController.listarCalendarioProfesores);
-} 
+    app.post("/profesor/crear", ProfesoresController.crearProfesores);
+    app.get("/profesor/listar", ProfesoresController.listarProfesores);
+    app.get("/profesor/:id", ProfesoresController.detalleProfesores);
+}
