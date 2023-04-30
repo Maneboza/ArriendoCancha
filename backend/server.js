@@ -1,11 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");  
+const AdminJS = require('adminjs');
+const AdminJSExpress = require('@adminjs/express');
+const AdminJSMongoose = require('@adminjs/mongoose');
+const Profesores = require("./models/profesores.models");
+const ReservaCancha= require("./models/reservacancha.model");
+const ClaseModel= require("./models/reservaclase.model");
+const Usuarios= require("./models/usuarios.models");
 
-// const AdminJS = require('adminjs');
-// const AdminJSExpress = require('@adminjs/express');
-// const AdminJSMongoose = require('@adminjs/mongoose');
-// const eventosModel = require("./models/eventos");
-// const usuariosModel = require("./models/usuarios.models");
 // const cors = require('cors')
 
 // npm install adminjs
@@ -46,6 +48,35 @@ app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Credentials', true);
     next();
 });
+
+AdminJS.registerAdapter(AdminJSMongoose)
+
+const adminJS = new AdminJS({
+  resources: [Profesores, ReservaCancha, ClaseModel, Usuarios ],
+  rootPath: '/admin'
+})
+//const adminRouter = AdminJSExpress.buildRouter(adminJS)
+const adminRouter = AdminJSExpress.buildAuthenticatedRouter(
+    adminJS,
+    {
+        cookieName: "adminjs",
+        cookiePassword: "complicatedsecurepassword",
+        authenticate: async (email, password) => {
+            if(email == "admin@gmail.com" && password == "123456"){
+                return true;
+            } else {
+                return false;
+            }
+        },
+    },
+    null,
+    {
+        resave: false, 
+        saveUninitialized: true,
+    }
+);
+
+app.use(adminJS.options.rootPath, adminRouter);
 
 app.listen(8000, () => {
     console.log("Listening at Port 8000")
