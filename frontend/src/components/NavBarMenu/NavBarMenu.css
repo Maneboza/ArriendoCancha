@@ -1,0 +1,48 @@
+.navbar{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, #ff0064,#ffb58a );
+    height: 3.5rem;
+    padding: 0 40px;
+}
+
+.logo {
+    height: 2.5rem;
+}
+
+.sidebar-logo {
+    height: 13rem;
+}
+
+.links {
+    color: white;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    
+    flex: 1;
+    
+}
+
+.links a {
+    margin-right: 4rem;
+}
+
+
+.links a:hover {
+    color: black;
+    font-weight: bold;
+}
+
+.sidebar-link {
+    font-size: large !important;
+}
+
+.sidebar-link:hover {
+    color: #ff0064 !important;
+    font-weight: bolder !important;
+}
+
