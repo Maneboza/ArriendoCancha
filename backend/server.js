@@ -7,8 +7,7 @@ const Profesores = require("./models/profesores.models");
 const ReservaCancha= require("./models/reservacancha.model");
 const ClaseModel= require("./models/reservaclase.model");
 const Usuarios= require("./models/usuarios.models");
-
-// const cors = require('cors')
+const cors = require("cors");
 
 // npm install adminjs
 // npm install @adminjs/express
@@ -28,10 +27,11 @@ mongoose.connect("mongodb://0.0.0.0:27017/Clubensignabd", {
     console.log(err)
 });
 
+
 const app = express();
 app.use(express.json());
 require('./routes/usuarios.routes')(app);
-
+app.use(cors());
 const ReservaCanchaRoutes = require('./routes/reservacancha.routes');
 ReservaCanchaRoutes(app);
 
@@ -42,7 +42,7 @@ const ProfesoresRoutes = require('./routes/profesores.routes');
 ProfesoresRoutes(app);
 
 app.use(function(req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, content-type");  
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
     res.setHeader('Access-Control-Allow-Credentials', true);
