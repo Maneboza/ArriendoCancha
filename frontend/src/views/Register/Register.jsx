@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
-import { useNavigate , Link } from "react-router-dom";
-import axios from 'axios';
+// import { useEffect, useState } from "react";
+// import { useNavigate , Link } from "react-router-dom";
+// import axios from 'axios';
 import "./Register.css";
+import bgImage from "../../imagenes/fondos/imgFondo8.png";
 
 const Register = () => {
     // const [listaEventos, setListaEventos] = useState([{}]);
@@ -21,7 +22,7 @@ const Register = () => {
 
     return (
         <div >
-            Register
+            <img className="bg-img" src={bgImage} alt="Bg" />
         </div>
     );
 }

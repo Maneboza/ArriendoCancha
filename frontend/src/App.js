@@ -13,17 +13,20 @@ import {NavBarMenu} from './components/NavBarMenu/NavBarMenu'
 import Home from './views/Home/Home';
 import Login from './views/Login/Login';
 import Register from './views/Register/Register';
+import Clases from './views/Clases/Clases';
+import Canchas from './views/Canchas/Canchas'
 
 function App() {
   return (
     <div>
-            {/* <h1>ROCK AND ROADIE</h1> */}
-      <NavBarMenu/>      
       <BrowserRouter>
+      <NavBarMenu/>   
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/register' element={<Register/>}/>
+          <Route path='/canchas' element={<Canchas/>}/>
+          <Route path='/clases' element={<Clases/>}/>
         </Routes>
       </BrowserRouter>
     </div>
