@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";
-import { useNavigate , Link } from "react-router-dom";
-import axios from 'axios';
+// import { useEffect, useState } from "react";
+// import { useNavigate , Link } from "react-router-dom";
+// import axios from 'axios';
 import "./Login.css";
+
+import bgImage from "../../imagenes/fondos/imgFondo9.png";
 
 const Login = () => {
     // const [listaEventos, setListaEventos] = useState([{}]);
@@ -21,7 +23,7 @@ const Login = () => {
 
     return (
         <div >
-            Login
+            <img className="bg-img" src={bgImage} alt="Bg" />
         </div>
     );
 }

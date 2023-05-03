@@ -49,11 +49,12 @@ app.use(function(req, res, next) {
     next();
 });
 
+
 AdminJS.registerAdapter(AdminJSMongoose)
 
 const adminJS = new AdminJS({
-  resources: [Profesores, ReservaCancha, ClaseModel, Usuarios ],
-  rootPath: '/admin'
+    resources: [Profesores, ReservaCancha, ClaseModel, Usuarios ],
+    rootPath: '/admin'
 })
 //const adminRouter = AdminJSExpress.buildRouter(adminJS)
 const adminRouter = AdminJSExpress.buildAuthenticatedRouter(
@@ -69,6 +70,7 @@ const adminRouter = AdminJSExpress.buildAuthenticatedRouter(
             }
         },
     },
+
     null,
     {
         resave: false, 
