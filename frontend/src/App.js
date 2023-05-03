@@ -24,7 +24,7 @@ function App() {
           <Route path='/profesor/:id' element={<DetalleProfesores/>}/>
           <Route path='/register' element={<Register/>}/>
           <Route path='/canchas' element={<Canchas/>}/>
-          <Route path='/clases' element={<Clases/>}/>
+          <Route path='/profesor/:id/reserva-clase/crear' element={<Clases/>}/>
         </Routes>
       </BrowserRouter>
     </div>

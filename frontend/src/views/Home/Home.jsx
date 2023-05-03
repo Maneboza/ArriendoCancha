@@ -33,9 +33,9 @@ const Home = () => {
         <div >
             <img className="bg-img" src={bgImage} alt="Bg" />
 
-            <div class="row">
+            <div className="row">
 
-            <div className= "col-7">
+            <div className= "col-6">
                 <div className="event-text-box">
                     {/* <img className="logo-event" src={logo3} alt="logo event" /> */}
                     <h3 className="tittle-event">Eventos</h3>
@@ -70,16 +70,16 @@ const Home = () => {
                 <div className="reserve-boxes">
                     <h4>Reserva</h4>
                     <div>
-                        <div class="container">
-                            <a href="/canchas" class="btn">
+                        <div className="container">
+                            <a href="/canchas" className="btn">
                                 <svg width="190" height="60">
                                 <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="180" height="40"></rect>
                                 </svg>
                                 <span>CANCHAS</span>
                             </a>
                         </div>
-                        <div class="container">
-                            <a href="/clases" class="btn">
+                        <div className="container">
+                            <a href="/profesor/listar" className="btn">
                                 <svg width="190" height="60">
                                 <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="180" height="40"></rect>
                                 </svg>
