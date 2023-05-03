@@ -21,10 +21,9 @@ const ListarProfesores = () => {
   return (
     <div className="container text-center">
       <img className="bg-img" src={bgImage} alt="Bg" />
-      
       <div className="row align-items-start">
-      
         <div className="col">
+       
             <Card style={{ width: '20rem' }} >
               <img className="profilepic" src={profileimg} alt="pp" />
               <Card.Body>
@@ -32,16 +31,43 @@ const ListarProfesores = () => {
                   listaProfesores.map((item, index) => {
                     return <div key={index} className="profesores">
                       <p><strong>Nombre:</strong> {item.nombre}</p>
-                      <Link className="btn-page" to={`/profesor/${item._id}`}> Detalle </Link>
+                    <Link className="btn-page" to={`/profesor/${item._id}`}> Detalle </Link>
                     </div>
                   })
                 }
               </Card.Body>
             </Card>
-        </div>  
-            
+
+            <Card style={{ width: '20rem' }} >
+              <img className="profilepic" src={profileimg} alt="pp" />
+              <Card.Body>
+                {
+                  listaProfesores.map((item, index) => {
+                    return <div key={index} className="profesores">
+                      <p><strong>Nombre:</strong> {item.nombre}</p>
+                    <Link className="btn-page" to={`/profesor/${item._id}`}> Detalle </Link>
+                    </div>
+                  })
+                }
+              </Card.Body>
+            </Card>
+
+            <Card style={{ width: '20rem' }} >
+              <img className="profilepic" src={profileimg} alt="pp" />
+              <Card.Body>
+                {
+                  listaProfesores.map((item, index) => {
+                    return <div key={index} className="profesores">
+                     
+                    <Link className="btn-page" to={`/profesor/${item._id}`}> Detalle </Link>
+                    </div>
+                  })
+                }
+              </Card.Body>
+            </Card>
+           
+        </div>
       </div>
-      
     </div>
 
 

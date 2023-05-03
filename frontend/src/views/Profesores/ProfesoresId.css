@@ -1,14 +1,5 @@
-/* .eventos{
-    display: inline-block;
-    border: 1rem black solid;
-    margin-bottom: 2rem;
-    padding: 2rem;
-    text-align: center;
-    text-decoration: solid;
-    text-shadow: 2px 2px 4px #000000;
-    background-color: #21272d;
-    color: aliceblue; 
-    font-size:x-large
+.col {    
+ background-color: #21272d;
 }
 
 button {
@@ -21,5 +12,14 @@ button {
     padding-left: 1rem;
     padding-right: 1rem;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-} */
+}
+
+.profesores{
+background-color: #21272d;
+}
+
+
+.card{
+    background-color: #21272d;
+}
 

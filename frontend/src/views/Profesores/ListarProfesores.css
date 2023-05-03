@@ -1,16 +1,22 @@
-.btn-page{
-    text-align: center;
-    width: 90%;
-    border-radius: 5px;
-    padding: 0.5rem 1rem;
-    stroke: #eefb03;
-    stroke-width: 3;
-    stroke-dasharray: 353, 0;
-    stroke-dashoffset: 0;
-    -webkit-transition: all 600ms ease;
-    transition: all 600ms ease;
+a.btn-page{ 
+    text-align: center; 
+    text-decoration: none;
+    
 }
 
 .col{
-    align-items: center;
+    display: flex;
+    background-color: rgb(13, 13, 13, 0.618);
+    padding: 2rem;
+    color: whitesmoke;
+    border-radius: 50px;
+    box-shadow: 1rem;
+    
 }
+
+.profilepic{
+    border-radius: 40px;
+}
+
+
+

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import bgImage from "../../imagenes/fondos/imgFondo6.png";
-import Card from 'react-bootstrap/Card';
+
 
 
 
@@ -21,24 +21,24 @@ const DetalleProfesores = () => {
   return (
     <div className="container text-center">
       <img className="bg-img" src={bgImage} alt="Bg" />
-      <div className="row align-items-start">
-        <Card style={{ width: '30rem' }} >
-          <Card.Text>
+      <div className="row">
+       
             <div className="col">
               {
                 <div className="profesores">
-                  <Card.Header> <p><strong>Nombre:</strong> {DetalleProfesores.nombre}</p></Card.Header>
+                  <p><strong>Nombre:</strong> {DetalleProfesores.nombre}</p>
                   <p><strong>Edad:</strong> {DetalleProfesores.edad}</p>
                   <p><strong>Días:</strong> {DetalleProfesores.dias}</p>
                   <p><strong>Horario:</strong>  {DetalleProfesores.horarioInicio} a {DetalleProfesores.horarioFin} </p>
                   <p><strong>Recomendación:</strong> {DetalleProfesores.recomendacion}</p>
                   <p><strong>Descripción:</strong> {DetalleProfesores.descripcion}</p>
-                  <button onClick={`/reserva-clase/crear`}>Agendar</button>
+                  <Link to='reserva-clase/crear'>
+                  <button>Agendar</button>
+                  </Link>
                 </div>
               }
             </div>
-          </Card.Text>
-        </Card>
+         
       </div>
     </div>
 
