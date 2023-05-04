@@ -32,7 +32,7 @@ const DetalleProfesores = () => {
               <p><strong>Horario:</strong>  {DetalleProfesores.horarioInicio} a {DetalleProfesores.horarioFin} </p>
               <p><strong>Recomendación:</strong> {DetalleProfesores.recomendacion}</p>
               <p><strong>Descripción:</strong> {DetalleProfesores.descripcion}</p>
-              <Link to='reserva-clase/crear'>
+              <Link to='/stepper'>
                 <button>Agendar</button>
               </Link>
 
@@ -42,7 +42,7 @@ const DetalleProfesores = () => {
 
       </div>
       <div>
-        <Link to='profesores/listar'>
+        <Link to='/stepper'>
           <button>Volver</button>
         </Link>
       </div>

@@ -62,6 +62,7 @@ import React, { useState } from "react";
 import styled from '@emotion/styled'
 import { CDBStepper, CDBStep, CDBInput, CDBBtn } from "cdbreact";
 
+
 export const StepperCanchas = () => {
 
     const [active, setActive] = useState(1)
