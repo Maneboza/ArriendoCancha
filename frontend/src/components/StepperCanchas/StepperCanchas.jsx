@@ -60,7 +60,7 @@
 import "./StepperCanchas.css";
 import React, { useState } from "react";
 import styled from '@emotion/styled'
-import { CDBStepper, CDBStep, CDBContainer, CDBInput, CDBBtn } from "cdbreact";
+import { CDBStepper, CDBStep, CDBInput, CDBBtn } from "cdbreact";
 
 export const StepperCanchas = () => {
 

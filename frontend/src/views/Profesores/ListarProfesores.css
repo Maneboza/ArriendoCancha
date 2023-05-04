@@ -1,7 +1,18 @@
 a.btn-page{ 
-    text-align: center; 
+    height: 3rem;
+    width: 8rem;
+    font-size:large;
+    color: black;
+    background-color: #eefb03;
+    border-radius: 30px;
+    border-style:none;
+    font-weight: bold;
+    margin-right: 24rem;
+    margin-top: 4rem;
+    margin: 2rem;
+    padding: 0.5rem 1rem;
     text-decoration: none;
-    
+
 }
 
 .col{
@@ -16,7 +27,14 @@ a.btn-page{
 
 .profilepic{
     border-radius: 40px;
+    
 }
 
 
+.card{
+    background-color: rgb(22, 22, 22);
+    width: 50rem;
+    height: 40rem;
+    
 
+}
