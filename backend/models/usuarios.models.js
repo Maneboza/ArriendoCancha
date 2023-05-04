@@ -28,7 +28,10 @@ const UsuariosSchema = new mongoose.Schema({
         required: [true, "La clave es requerida"],
         minlength: [8, "Debe tener un mínimo de 8 caracateres"]
     },
-
+    claveConfirm: {
+        type: String,
+        required: [true, "La confirmacion de clave es requerida"]
+    }
 }, {timestamps: true});
 
 const Usuarios = mongoose.model("usuarios", UsuariosSchema);

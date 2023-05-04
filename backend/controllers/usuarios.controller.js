@@ -1,6 +1,5 @@
-const UsuariosModel =  require("../models/usuarios.models");
-const {Router} = require('express')
-const router = Router()
+const UsuariosModel =  require("../models/usuarios");
+
 
 module.exports.index = (request, response) => {
     response.json({
