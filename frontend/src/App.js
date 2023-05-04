@@ -10,6 +10,7 @@ import Register from './views/Register/Register';
 // import 'bootstrap/dist/css/bootstrap.css'
 import Clases from './views/Clases/Clases';
 import Canchas from './views/Canchas/Canchas'
+import CalendarioClases from './components/CalendarioClases/CalendarioClases';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path='/profesor/:id' element={<DetalleProfesores/>}/>
           <Route path='/register' element={<Register/>}/>
           <Route path='/canchas' element={<Canchas/>}/>
+          <Route path='/canchas1' element={<CalendarioClases/>}/>
           <Route path='/profesor/:id/reserva-clase/crear' element={<Clases/>}/>
         </Routes>
       </BrowserRouter>

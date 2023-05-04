@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 import bgImage from "../../imagenes/fondos/imgFondo7.png";
 import Card from 'react-bootstrap/Card';
 import './ListarProfesores.css';
-import profileimg from '../../imagenes/profesores/profe3.png'
+import profileimg3 from '../../imagenes/profesores/profe3.png'
+
+
 
 
 const ListarProfesores = () => {
@@ -19,60 +21,28 @@ const ListarProfesores = () => {
   }, []);
 
   return (
+
     <div className="container text-center">
       <img className="bg-img" src={bgImage} alt="Bg" />
-      <div className="row align-items-start">
-        <div className="col">
-       
-            <Card style={{ width: '20rem' }} >
-              <img className="profilepic" src={profileimg} alt="pp" />
-              <Card.Body>
-                {
-                  listaProfesores.map((item, index) => {
-                    return <div key={index} className="profesores">
-                      <p><strong>Nombre:</strong> {item.nombre}</p>
-                    <Link className="btn-page" to={`/profesor/${item._id}`}> Detalle </Link>
-                    </div>
-                  })
-                }
-              </Card.Body>
-            </Card>
-
-            <Card style={{ width: '20rem' }} >
-              <img className="profilepic" src={profileimg} alt="pp" />
-              <Card.Body>
-                {
-                  listaProfesores.map((item, index) => {
-                    return <div key={index} className="profesores">
-                      <p><strong>Nombre:</strong> {item.nombre}</p>
-                    <Link className="btn-page" to={`/profesor/${item._id}`}> Detalle </Link>
-                    </div>
-                  })
-                }
-              </Card.Body>
-            </Card>
-
-            <Card style={{ width: '20rem' }} >
-              <img className="profilepic" src={profileimg} alt="pp" />
-              <Card.Body>
-                {
-                  listaProfesores.map((item, index) => {
-                    return <div key={index} className="profesores">
-                     
-                    <Link className="btn-page" to={`/profesor/${item._id}`}> Detalle </Link>
-                    </div>
-                  })
-                }
-              </Card.Body>
-            </Card>
-           
+      
+        <div className="row">
+          <div className="col">
+            {listaProfesores.map((item, index) =>
+              <Card className="card" key={index}  >
+                <img className="profilepic" src={profileimg3} alt="pp" />            
+                <div key={index} className="profesores">
+                  <p><strong>Nombre:</strong> {item.nombre}</p>
+                  <p><strong>Días:</strong> {item.dias}</p>
+                  <p><strong>Horario:</strong> {item.horarioInicio} a {item.horarioFin}  </p>
+                  <Link className="btn-page" to={`/profesor/${item._id}`}> Detalle </Link>                              
+                </div>
+              </Card>
+            )}
+          </div>
         </div>
-      </div>
+     
     </div>
-
-
   );
-
 }
 
 export default ListarProfesores;

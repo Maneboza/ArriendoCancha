@@ -22,27 +22,35 @@ const DetalleProfesores = () => {
     <div className="container text-center">
       <img className="bg-img" src={bgImage} alt="Bg" />
       <div className="row">
-       
-            <div className="col">
-              {
-                <div className="profesores">
-                  <p><strong>Nombre:</strong> {DetalleProfesores.nombre}</p>
-                  <p><strong>Edad:</strong> {DetalleProfesores.edad}</p>
-                  <p><strong>Días:</strong> {DetalleProfesores.dias}</p>
-                  <p><strong>Horario:</strong>  {DetalleProfesores.horarioInicio} a {DetalleProfesores.horarioFin} </p>
-                  <p><strong>Recomendación:</strong> {DetalleProfesores.recomendacion}</p>
-                  <p><strong>Descripción:</strong> {DetalleProfesores.descripcion}</p>
-                  <Link to='reserva-clase/crear'>
-                  <button>Agendar</button>
-                  </Link>
-                </div>
-              }
+
+        <div className="col">
+          {
+            <div className="profesores">
+              <p><strong>Nombre:</strong> {DetalleProfesores.nombre}</p>
+              <p><strong>Edad:</strong> {DetalleProfesores.edad}</p>
+              <p><strong>Días:</strong> {DetalleProfesores.dias}</p>
+              <p><strong>Horario:</strong>  {DetalleProfesores.horarioInicio} a {DetalleProfesores.horarioFin} </p>
+              <p><strong>Recomendación:</strong> {DetalleProfesores.recomendacion}</p>
+              <p><strong>Descripción:</strong> {DetalleProfesores.descripcion}</p>
+              <Link to='reserva-clase/crear'>
+                <button>Agendar</button>
+              </Link>
+
             </div>
-         
+          }
+        </div>
+
+      </div>
+      <div>
+        <Link to='profesores/listar'>
+          <button>Volver</button>
+        </Link>
       </div>
     </div>
 
+
   );
+
 }
 
 export default DetalleProfesores; 

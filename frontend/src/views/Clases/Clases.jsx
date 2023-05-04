@@ -4,6 +4,7 @@
 import "./Clases.css";
 import bgImage from "../../imagenes/fondos/imgFondo7.png";
 
+
 const Clases = () => {
        
    

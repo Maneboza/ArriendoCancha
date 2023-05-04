@@ -74,7 +74,7 @@ export const NavBarMenu = () => {
 
 
 
-{/* 
+/* 
 
 
 <Navbar className="navbar" expand={true}>
@@ -128,4 +128,4 @@ export const NavBarMenu = () => {
         </Navbar.Offcanvas>
       </Container>
     </Navbar> 
-); */}
+); */

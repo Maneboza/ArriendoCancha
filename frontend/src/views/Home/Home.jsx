@@ -33,9 +33,7 @@ const Home = () => {
         <div >
             <img className="bg-img" src={bgImage} alt="Bg" />
 
-            <div className="row">
-
-            <div className= "col-6">
+                       <div className= "col-6">
                 <div className="event-text-box">
                     {/* <img className="logo-event" src={logo3} alt="logo event" /> */}
                     <h3 className="tittle-event">Eventos</h3>
@@ -66,7 +64,7 @@ const Home = () => {
                 </div>
             </div>
             
-            <div className="col-5">
+            <div className="col-6">
                 <div className="reserve-boxes">
                     <h4>Reserva</h4>
                     <div>
@@ -102,7 +100,7 @@ const Home = () => {
 
             </div>
         </div>
-        </div>
+        
     );
 }
 
