@@ -23,20 +23,6 @@ const ListarProfesores = () => {
       <img className="bg-img" src={bgImage} alt="Bg" />
       <div className="row align-items-start">
         <div className="col">
-       
-            <Card style={{ width: '20rem' }} >
-              <img className="profilepic" src={profileimg} alt="pp" />
-              <Card.Body>
-                {
-                  listaProfesores.map((item, index) => {
-                    return <div key={index} className="profesores">
-                      <p><strong>Nombre:</strong> {item.nombre}</p>
-                    <Link className="btn-page" to={`/profesor/${item._id}`}> Detalle </Link>
-                    </div>
-                  })
-                }
-              </Card.Body>
-            </Card>
 
             <Card style={{ width: '20rem' }} >
               <img className="profilepic" src={profileimg} alt="pp" />
@@ -58,7 +44,21 @@ const ListarProfesores = () => {
                 {
                   listaProfesores.map((item, index) => {
                     return <div key={index} className="profesores">
-                     
+                      <p><strong>Nombre:</strong> {item.nombre}</p>
+                    <Link className="btn-page" to={`/profesor/${item._id}`}> Detalle </Link>
+                    </div>
+                  })
+                }
+              </Card.Body>
+            </Card>
+
+            <Card style={{ width: '20rem' }} >
+              <img className="profilepic" src={profileimg} alt="pp" />
+              <Card.Body>
+                {
+                  listaProfesores.map((item, index) => {
+                    return <div key={index} className="profesores">
+                  
                     <Link className="btn-page" to={`/profesor/${item._id}`}> Detalle </Link>
                     </div>
                   })
