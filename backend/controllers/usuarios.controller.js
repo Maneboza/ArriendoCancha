@@ -1,4 +1,4 @@
-const UsuariosModel =  require("../models/usuarios");
+const UsuariosModel =  require("../models/usuarios.models");
 
 
 module.exports.index = (request, response) => {
