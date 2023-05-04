@@ -22,23 +22,32 @@ const ListarProfesores = () => {
 
     <div className="container text-center">
       <img className="bg-img" src={bgImage} alt="Bg" />
+     
       
         <div className="row">
           <div className="col">
             {listaProfesores.map((item, index) =>
+             
               <Card className="card" key={index}  >
                 <img className="profilepic" src={profileimg3} alt="pp" />            
                 <div key={index} className="profesores">
                   <p><strong>Nombre:</strong> {item.nombre}</p>
                   <p><strong>Días:</strong> {item.dias}</p>
                   <p><strong>Horario:</strong> {item.horarioInicio} a {item.horarioFin}  </p>
-                  <Link className="btn-page" to={`/profesor/${item._id}`}> Detalle </Link>                              
+                  <Link className="btn-page" to={`/profesor/${item._id}`}> Detalle </Link>     
+                  <Link to='profesor/:id/reserva-clase/crear'> Agendar          </Link>                  
                 </div>
               </Card>
+               
+              
+             
+
+              
+            
             )}
           </div>
         </div>
-     
+        
     </div>
   );
 }
