@@ -21,30 +21,23 @@ mongoose.connect("mongodb://0.0.0.0:27017/Clubensignabd", {
 });
 
 
+
 const app = express();
 app.use(express.json());
-require('./routes/usuarios.routes')(app);
 app.use(cors());
 
+
+require('./routes/usuarios.routes')(app);
 const ReservaCanchaRoutes = require('./routes/reservacancha.routes');
 ReservaCanchaRoutes(app);
-
 const ReservaClaseRoutes = require('./routes/reservaclase.routes');
 ReservaClaseRoutes(app);
-
 const ProfesoresRoutes = require('./routes/profesores.routes');
 ProfesoresRoutes(app);
-
 const FormularioRoutes = require('./routes/formulariocontacto.routes');
 FormularioRoutes(app);
-
-app.use(function(req, res, next) {
-    res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, content-type");  
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-    res.setHeader('Access-Control-Allow-Credentials', true);
-    next();
-});
+const LoginRoutes = require ('./routes/usuarios.routes');
+LoginRoutes (app);
 
 
 AdminJS.registerAdapter(AdminJSMongoose)

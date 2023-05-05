@@ -1,17 +1,10 @@
-// import { useEffect, useState } from "react";
-// import { useNavigate , Link } from "react-router-dom";
-// import axios from 'axios';
 import "./Login.css";
-
 import { useNavigate } from "react-router-dom";
 import axios from 'axios'
 import { useState } from "react";
-
 import bgImage from "../../imagenes/fondos/imgFondo9.png";
 
 const Login = () => {
-    // const [listaEventos, setListaEventos] = useState([{}]);
-    // const navigate = useNavigate();
 
     const navigate = useNavigate() 
 
@@ -28,8 +21,8 @@ const Login = () => {
             email, clave
           })
           // si el login fué exitoso, guardamos la credencial en localStorage
-          //   localStorage.setItem('token', resp.data.token)
-          // y redirigimos a la pantalla principal
+            localStorage.setItem('token', resp.data.token)
+        //   y redirigimos a la pantalla principal
           navigate('/profesor/listar')
         }
         catch(err){
