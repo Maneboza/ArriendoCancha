@@ -1,17 +1,10 @@
-// import { useEffect, useState } from "react";
-// import { useNavigate , Link } from "react-router-dom";
-// import axios from 'axios';
 import "./Login.css";
-
 import { useNavigate } from "react-router-dom";
 import axios from 'axios'
 import { useState } from "react";
-
 import bgImage from "../../imagenes/fondos/imgFondo9.png";
 
 const Login = () => {
-    // const [listaEventos, setListaEventos] = useState([{}]);
-    // const navigate = useNavigate();
 
     const navigate = useNavigate() 
 

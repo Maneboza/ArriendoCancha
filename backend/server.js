@@ -1,24 +1,15 @@
 const express = require("express");
 const mongoose = require("mongoose");  
-
 const AdminJS = require('adminjs');
 const AdminJSExpress = require('@adminjs/express');
 const AdminJSMongoose = require('@adminjs/mongoose');
-
 const Profesores = require("./models/profesores.models");
 const ReservaCancha= require("./models/reservacancha.model");
 const ClaseModel= require("./models/reservaclase.model");
 const Usuarios= require("./models/usuarios.models");
+const Formulario= require("./models/formulariocontacto.models")
 const cors = require("cors");
 
-// npm install adminjs
-// npm install @adminjs/express
-// npm install @adminjs/mongoose
-// npm install tslib
-// npm install express-formidable
-// npm install express-session
-
-// npm install adminjs @adminjs/express @adminjs/mongoose tslib express-formidable express-session
 
 mongoose.connect("mongodb://0.0.0.0:27017/Clubensignabd", {
     useNewUrlParser: true,
@@ -30,32 +21,29 @@ mongoose.connect("mongodb://0.0.0.0:27017/Clubensignabd", {
 });
 
 
+
 const app = express();
 app.use(express.json());
-require('./routes/usuarios.routes')(app);
 app.use(cors());
+
+
+require('./routes/usuarios.routes')(app);
 const ReservaCanchaRoutes = require('./routes/reservacancha.routes');
 ReservaCanchaRoutes(app);
-
 const ReservaClaseRoutes = require('./routes/reservaclase.routes');
 ReservaClaseRoutes(app);
-
 const ProfesoresRoutes = require('./routes/profesores.routes');
 ProfesoresRoutes(app);
-
-app.use(function(req, res, next) {
-    res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, content-type");  
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-    res.setHeader('Access-Control-Allow-Credentials', true);
-    next();
-});
+const FormularioRoutes = require('./routes/formulariocontacto.routes');
+FormularioRoutes(app);
+const LoginRoutes = require ('./routes/usuarios.routes');
+LoginRoutes (app);
 
 
 AdminJS.registerAdapter(AdminJSMongoose)
 
 const adminJS = new AdminJS({
-    resources: [Profesores, ReservaCancha, ClaseModel, Usuarios ],
+    resources: [Profesores, ReservaCancha, ClaseModel, Usuarios, Formulario ],
     rootPath: '/admin'
 })
 //const adminRouter = AdminJSExpress.buildRouter(adminJS)

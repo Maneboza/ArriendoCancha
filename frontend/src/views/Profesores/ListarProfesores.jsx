@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import bgImage from "../../imagenes/fondos/imgFondo7.png";
 import Card from 'react-bootstrap/Card';
 import './ListarProfesores.css';
-import profileimg3 from '../../imagenes/profesores/profe3.png'
 
+// import logo1 from '../../imagenes/logos/logo4.png'
 
 const ListarProfesores = () => {
   const [listaProfesores, setListaProfesores] = useState([{}]);
@@ -21,26 +21,24 @@ const ListarProfesores = () => {
   return (
 
     <div className="container text-center">
+      
       <img className="bg-img" src={bgImage} alt="Bg" />
-      
-        <div className="row">
-          <div className="col">
-            {listaProfesores.map((item, index) =>
-      
-              <Card className="card" key={index}  >
-                <img className="profilepic" src={profileimg3} alt="pp" />            
-                <div key={index} className="profesores">
+        <div className="row">       
+          <div className="col">          
+            {listaProfesores.map((item, index) =>             
+              <Card className="card" key={index}  >     
+              <img className="card-img-center" src={item.imageURL} alt="teacherimage" />                   
+                <div key={index} className="profesores">                 
                   <p><strong>Nombre:</strong> {item.nombre}</p>
                   <p><strong>Días:</strong> {item.dias}</p>
                   <p><strong>Horario:</strong> {item.horarioInicio} a {item.horarioFin}  </p>
-                  <Link className="btn-page" to={`/profesor/${item._id}`}> Detalle </Link>     
-                  <Link to='profesor/:id/reserva-clase/crear'> Agendar          </Link>                  
+                  {/* <img className="logohombre" src={logo1} alt="logo" />  */}
+                  <Link className="btn-page" to={`/profesor/${item._id}`}> Detalle </Link>              
                 </div>
-              </Card>       
-
+              </Card>
             )}
           </div>
-        </div>
+        </div>  
     </div>
   );
 }

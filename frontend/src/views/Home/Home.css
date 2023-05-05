@@ -187,3 +187,10 @@ h3 {
     padding: 1rem;
     margin-left: 13rem;
 }
+
+button{
+border-radius: 20px;
+text-transform: none;
+background-color: yellow;
+padding: 0.5rem;
+}
