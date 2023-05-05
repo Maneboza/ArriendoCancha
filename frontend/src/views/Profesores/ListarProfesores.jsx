@@ -7,8 +7,6 @@ import './ListarProfesores.css';
 
 // import logo1 from '../../imagenes/logos/logo4.png'
 
-
-
 const ListarProfesores = () => {
   const [listaProfesores, setListaProfesores] = useState([{}]);
 

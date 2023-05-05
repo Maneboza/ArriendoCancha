@@ -21,7 +21,8 @@ const Register = () => {
         try {
           //const resp = await axios.post('http://localhost:8000/api/auth/register', {
           
-        //   const resp = await axios.post(window.$api + 'usuarios/crear', {    
+        //   const resp = await axios.post(window.$api + 'usuarios/crear', {
+        console.log("register jsx")        
         const resp = await axios.post('http://localhost:8000/usuarios/crear', {
             nombre,apellido,email,telefono,rut,clave,claveConfirm
           })
