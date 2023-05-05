@@ -62,7 +62,6 @@ import React, { useState } from "react";
 import styled from '@emotion/styled'
 import { CDBStepper, CDBStep, CDBInput, CDBBtn } from "cdbreact";
 
-
 export const StepperCanchas = () => {
 
     const [active, setActive] = useState(1)
@@ -93,66 +92,8 @@ export const StepperCanchas = () => {
             active={active}
             component={<Step3 handleNextPrevClick={handleNextPrevClick} />}
             />
-            <CDBStep
-            id={4}
-            name="Finish"
-            handleClick={() => handleNextPrevClick(4)}
-            active={active}
-            component={<Step4 handleNextPrevClick={handleNextPrevClick} />}
-            />
         </CDBStepper>
     )
-    };
-
-    const Step4 = ({ handleNextPrevClick }) => {
-    return (
-        <StepContainer md="12">
-        <div style={{ width: '100%', background: 'transparent', padding: '30px 10px', height: '100%' }}>
-            <div
-            style={{
-                margin: '0 auto',
-                maxWidth: '500px',
-                borderRadius: '10px',
-                background: '#f5f5f5',
-                boxShadow: '0px 4px 10px 0 rgba(0, 0, 0, 0.05)',
-            }}
-            >
-            <FlexColumnContainer>
-                <div
-                style={{
-                    textAlign: 'center',
-                    padding: '20px 0 10px 0',
-                    color: '#939393',
-                    fontSize: '30px',
-                    fontWeight: 'bold',
-                }}
-                >
-                Step 4
-                </div>
-                <FlexColumnContainer width="100%">
-                <div style={{ fontSize: '25px', textAlign: 'center' }}>
-                    Congratulations! You have completed this process.
-                    <span style={{ fontSize: '50px', display: 'block' }} role="img" aria-label="image">
-                    🎉
-                    </span>
-                </div>
-                <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'space-around' }}>
-                    <CDBBtn
-                    flat
-                    outline
-                    circle={false}
-                    color="secondary"
-                    onClick={() => handleNextPrevClick(3)}
-                    >
-                    Previous
-                    </CDBBtn>
-                </div>
-                </FlexColumnContainer>
-            </FlexColumnContainer>
-            </div>
-        </div>
-        </StepContainer>
-    );
     };
 
     const Step3 = ({ handleNextPrevClick }) => {
@@ -325,10 +266,31 @@ export const StepperCanchas = () => {
                 Step 1
                 </div>
                 <FlexColumnContainer width="100%">
-                <CDBInput color="secondary" label="Username" />
-                <CDBInput color="secondary" label="Email" />
-                <CDBInput color="secondary" label="Password" />
-                <CDBInput color="secondary" label="Confirm Password" />
+                    <div className='calentario-canchas'>
+                        <h5>Selecciona un día y la hora:</h5>
+                        <label for="month">Mes :</label>
+                        <select name="month" id="month">
+                        <option value="mayo">Mayo</option>
+                        <option value="junio">Junio</option>
+                        <option value="julio">Julio</option>
+                        </select>
+
+                        <div className='hours' >
+                            <button type="button" className='hour-button'>8:00</button>
+                            <button type="button" className='hour-button'>9:00</button>
+                            <button type="button" className='hour-button'>10:10</button>
+                            <button type="button" className='hour-button'>11:20</button>
+                            <button type="button" className='hour-button'>12:30</button>
+                            <button type="button" className='hour-button'>14:00</button>
+                            <button type="button" className='hour-button'>15:00</button>
+                            <button type="button" className='hour-button'>16:10</button>
+                            <button type="button" className='hour-button'>17:20</button>
+                            <button type="button" className='hour-button'>18:30</button>
+                            <button type="button" className='hour-button'>19:40</button>
+                        </div>
+                        <button type="submit" className='submit-button'>Agendar</button>
+                    </div>
+
                 <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'space-around' }}>
                     <CDBBtn
                     color="secondary"

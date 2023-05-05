@@ -33,7 +33,7 @@ const Home = () => {
         <div >
             <img className="bg-img" src={bgImage} alt="Bg" />
 
-                       <div className= "col-6">
+            <div className= "col-6 text-center">
                 <div className="event-text-box">
                     {/* <img className="logo-event" src={logo3} alt="logo event" /> */}
                     <h3 className="tittle-event">Eventos</h3>
@@ -41,21 +41,21 @@ const Home = () => {
                 <div className="event-box">
                     <img className="img-event" src={evento1} alt="img event" />
                     <div className="event-box-text">
-                        <h6>Rumbo al Mundial de Tenis en Silla de Ruedas</h6>
+                        <h5>Rumbo al Mundial de Tenis en Silla de Ruedas</h5>
                         <p>Unas 20 tenistas participaran en el torneo que se disputara entre el 16 y el 23 de julio. Será el primer torneo en superficie de arcilla de la temporada.</p>
                     </div>
                 </div>
                 <div className="event-box"> 
                     <img className="img-event" src={evento2} alt="img even" />
                     <div className="event-box-text">
-                        <h6>El tercer Campeonato Master ya tiene a sus primeros medalleros</h6>
+                        <h5>El tercer Campeonato Master ya tiene a sus primeros medalleros</h5>
                         <p>Este sábado 8 de abril, el gimnasio CEO 1, ubicado en el Centro de Entrenamiento Olímpico (CEO) de Ñuñoa, recibió a los competidores el tercer...</p>
                     </div>
                 </div>
                 <div className="event-box">
                     <img className="img-event" src={evento3} alt="img even" />
                     <div className="event-box-text">
-                        <h6>Selectivo Infantil & Juvenil vía 2023</h6>
+                        <h5>Selectivo Infantil & Juvenil vía 2023</h5>
                         <p>Este pasado fin de semana 24 al 26 de marzo, se realizó el circuito nacional de estudiantes organizado por la federación nacional de tenis.</p>
                     </div>
                 </div>
@@ -64,7 +64,7 @@ const Home = () => {
                 </div>
             </div>
             
-            <div className="col-6">
+            <div className="col-6 text-center">
                 <div className="reserve-boxes">
                     <h4>Reserva</h4>
                     <div>

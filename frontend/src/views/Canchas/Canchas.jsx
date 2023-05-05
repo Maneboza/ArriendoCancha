@@ -14,7 +14,6 @@ const Canchas = () => {
             <img className="bg-img" src={bgImage} alt="Bg" />
             <StepperCanchas />
         </div>
-
             
 );
 };
