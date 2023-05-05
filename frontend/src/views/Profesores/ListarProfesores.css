@@ -32,9 +32,21 @@ a.btn-page{
 
 
 div.card{
-    background-color: rgb(22, 22, 22);
-    width: 40rem;
+    background-color: rgb(39, 37, 37);
+    width: 55rem;
     height: 30rem;
+    
+
+}
+
+.logohombre{
+    height: 10%;
+}
+
+img.teacherimage {
+    height: 20rem;
+    width: 40rem;
+    
     
 
 }

@@ -12,6 +12,7 @@ import Clases from './views/Clases/Clases';
 import Canchas from './views/Canchas/Canchas'
 import CalendarioClases from './components/CalendarioClases/CalendarioClases';
 import StepperClases from './components/StepperClases/StepperClases';
+// import Formulario from './views/FormularioContacto/FormularioContacto';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path='/canchas1' element={<CalendarioClases/>}/> 
           <Route path='/profesor/:id/reserva-clase/crear' element={<Clases/>}/>
           <Route path='/stepper' element={<StepperClases/>}/>
+          {/* <Route path='/formulario/crear' element={<Formulario/>}/> */}
         </Routes>
       </BrowserRouter>
     </div>

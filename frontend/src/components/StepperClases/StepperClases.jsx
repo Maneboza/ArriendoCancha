@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import styled from '@emotion/styled'
 import { CDBStepper, CDBStep, CDBBtn } from "cdbreact";
 import ListarProfesores from "../../views/Profesores/ListarProfesores";
+import ProfesoresId from "../../views/Profesores/ProfesoresId"
 
 
 export const StepperClases= () => {
@@ -189,6 +190,7 @@ export const StepperClases= () => {
                 >
                 Step 2
                 </div>
+                <ProfesoresId></ProfesoresId>
                 <FlexColumnContainer width="100%">
                 {/* <CDBInput color="secondary" label="FirstName" />
                 <CDBInput color="secondary" label="LastName" />

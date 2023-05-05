@@ -22,10 +22,13 @@ const DetalleProfesores = () => {
     <div className="container text-center">
       <img className="bg-img" src={bgImage} alt="Bg" />
       <div className="row">
-
+    
         <div className="col">
-          {
+       
+          {  
+            
             <div className="profesores">
+             <img className="card-img-center" src={DetalleProfesores.imageURL} alt="teacherimage" style={{height:300}} /> 
               <p><strong>Nombre:</strong> {DetalleProfesores.nombre}</p>
               <p><strong>Edad:</strong> {DetalleProfesores.edad}</p>
               <p><strong>Días:</strong> {DetalleProfesores.dias}</p>

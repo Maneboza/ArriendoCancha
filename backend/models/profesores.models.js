@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 
 const ProfesoresSchema = new mongoose.Schema({
+
+    imageURL: {
+        type: String,
+    },
     nombre: {
         type: String,
         required: [true, "El nombre es requerido"]
@@ -25,7 +29,9 @@ const ProfesoresSchema = new mongoose.Schema({
     },
     valorClase:{
         type: String
-    }
+    },
+    
+    
 }, {timestamps: true});
 
 const Profesores = mongoose.model("profesores", ProfesoresSchema);

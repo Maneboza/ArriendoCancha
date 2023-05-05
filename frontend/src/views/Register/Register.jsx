@@ -2,15 +2,11 @@ import './Register.css'
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from 'axios'
-
-import "./Register.css";
 import bgImage from "../../imagenes/fondos/imgFondo8.png";
 
 const Register = () => {
 
     const navigate = useNavigate() 
-
-
 
     const [nombre, setNombre] = useState('')
     const [apellido, setApellido] = useState('')
@@ -42,8 +38,7 @@ const Register = () => {
           alert(err.response.data.error)
           return
         }
-    
-        
+            
     }
 
     return (
