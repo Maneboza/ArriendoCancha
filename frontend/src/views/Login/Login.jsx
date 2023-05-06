@@ -96,7 +96,7 @@ const LoginForm = () => {
         <input className="form-control" id="email" placeholder="EMAIL" value={email} onChange={(e) => setEmail(e.target.value)} />
         </div>     
         <div className="mb-3">
-        <input className="form-control" id="password" placeholder="CLAVE" value={clave} onChange={(e) => setClave(e.target.value)} />
+        <input type="password"className="form-control" id="password" placeholder="CLAVE" value={clave} onChange={(e) => setClave(e.target.value)} />
         </div>
           {error && <div>{error}</div>}
         <div className='register-button-out'>
