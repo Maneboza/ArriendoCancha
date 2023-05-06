@@ -5,7 +5,7 @@ const AdminJSExpress = require('@adminjs/express');
 const AdminJSMongoose = require('@adminjs/mongoose');
 const Profesores = require("./models/profesores.models");
 const CanchasModel = require("./models/canchas.models");
-const ClaseModel= require("./models/reservaclase.model");
+// const ClaseModel= require("./models/reservaclase.model");
 const Usuarios= require("./models/usuarios.models");
 const Formulario= require("./models/formulariocontacto.models")
 const cors = require("cors");
@@ -21,7 +21,6 @@ mongoose.connect("mongodb://0.0.0.0:27017/Clubensignabd", {
 });
 
 
-
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -30,8 +29,8 @@ app.use(cors());
 require('./routes/usuarios.routes')(app);
 const CanchaRoutes = require('./routes/cancha.routes');
 CanchaRoutes(app);
-const ReservaClaseRoutes = require('./routes/reservaclase.routes');
-ReservaClaseRoutes(app);
+// const ReservaClaseRoutes = require('./routes/reservaclase.routes');
+// ReservaClaseRoutes(app);
 const ProfesoresRoutes = require('./routes/profesores.routes');
 ProfesoresRoutes(app);
 const FormularioRoutes = require('./routes/formulariocontacto.routes');
@@ -43,7 +42,7 @@ LoginRoutes (app);
 AdminJS.registerAdapter(AdminJSMongoose)
 
 const adminJS = new AdminJS({
-    resources: [Profesores, CanchasModel, ClaseModel, Usuarios, Formulario ],
+    resources: [Profesores, CanchasModel, Usuarios, Formulario ], //ClaseModel
     rootPath: '/admin'
 })
 //const adminRouter = AdminJSExpress.buildRouter(adminJS)

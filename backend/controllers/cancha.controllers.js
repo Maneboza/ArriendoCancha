@@ -1,6 +1,6 @@
 const CanchasModel = require("../models/canchas.models");
 const DisponibilidadCanchas = require("../models/disponibilidad-canchas.models");
-const Reserva = require("../models/reservas.model")
+const Reserva = require("../models/reservas-canchas.model")
 const dateFns = require("date-fns");
 const mongoose = require("mongoose"); 
 
@@ -15,6 +15,7 @@ module.exports.crearCancha = async (request, response) => {
     response.status(500).json(error);
   }
 };
+
 
 // no se utiliza, se van a crear desde el script rellenar-db.js
 
@@ -54,7 +55,6 @@ module.exports.crearCancha = async (request, response) => {
 // };
 
 
-
 module.exports.buscarDisponibilidad = async (request, response) => {
   const { id } = request.params;
   const { fecha } = request.query;
@@ -69,12 +69,13 @@ module.exports.buscarDisponibilidad = async (request, response) => {
 
   const disponibilidades = await DisponibilidadCanchas.find({
     idCancha: id,
-    start: { $gte: dateFns.startOfDay(date) },
+    start: { $gte: dateFns.startOfDay(date) }, 
     end: { $lte: dateFns.endOfDay(date) },
   });
 
   response.status(200).json(disponibilidades);
 };
+
 
 module.exports.crearReservaCancha = async (request, response) => {
   const { id } = request.params;
@@ -86,6 +87,7 @@ module.exports.crearReservaCancha = async (request, response) => {
     return response.status(404).json({ error: "La cancha no existe" });
   }
 
+  
   const disponibilidad = await DisponibilidadCanchas.findById(idDisponibilidad);
 
   if (!disponibilidad) {
