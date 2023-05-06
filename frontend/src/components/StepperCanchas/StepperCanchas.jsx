@@ -57,10 +57,12 @@
 
 //     export default StepperCanchas;
 
+
 import "./StepperCanchas.css";
 import React, { useState } from "react";
 import styled from '@emotion/styled'
 import { CDBStepper, CDBStep, CDBInput, CDBBtn } from "cdbreact";
+import Calendario from "../Calendario/Calendario";
 
 export const StepperCanchas = () => {
 
@@ -69,6 +71,7 @@ export const StepperCanchas = () => {
     const handleNextPrevClick = (a) => {
             setActive(a)
     };
+
     return (
         <CDBStepper direction="horizontal" showTitle={false} showTooltip={false}>
             <CDBStep
@@ -266,30 +269,11 @@ export const StepperCanchas = () => {
                 Step 1
                 </div>
                 <FlexColumnContainer width="100%">
-                    <div className='calentario-canchas'>
-                        <h5>Selecciona un día y la hora:</h5>
-                        <label for="month">Mes :</label>
-                        <select name="month" id="month">
-                        <option value="mayo">Mayo</option>
-                        <option value="junio">Junio</option>
-                        <option value="julio">Julio</option>
-                        </select>
-
-                        <div className='hours' >
-                            <button type="button" className='hour-button'>8:00</button>
-                            <button type="button" className='hour-button'>9:00</button>
-                            <button type="button" className='hour-button'>10:10</button>
-                            <button type="button" className='hour-button'>11:20</button>
-                            <button type="button" className='hour-button'>12:30</button>
-                            <button type="button" className='hour-button'>14:00</button>
-                            <button type="button" className='hour-button'>15:00</button>
-                            <button type="button" className='hour-button'>16:10</button>
-                            <button type="button" className='hour-button'>17:20</button>
-                            <button type="button" className='hour-button'>18:30</button>
-                            <button type="button" className='hour-button'>19:40</button>
-                        </div>
-                        <button type="submit" className='submit-button'>Agendar</button>
+                
+                    <div className=''>
+                        <Calendario />
                     </div>
+                
 
                 <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'space-around' }}>
                     <CDBBtn
