@@ -26,10 +26,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     color: black;
     border-style: none;
     border-radius: 50px;
     margin-left: 1rem; 
+    
+    
 }
 
 .link-like-bt:hover {

@@ -43,46 +43,35 @@ const Register = () => {
     }
 
     return (
-        <div >
+        <div className="container py-4">
             <img className="bg-img" src={bgImage} alt="Bg" />
-            <form className='register-input' onSubmit={register}>
-                    
-                    <div className="form-group">
-                        {/* <label htmlFor="exampleFormControlInput1">Nombre</label> */}
-                        <input className="form-control" id="exampleFormControlInput1" placeholder="NOMBRE" required onChange={ev => setNombre(ev.target.value)}/>
-                    </div>
-        
-                    <div className="form-group">
-                        {/* <label htmlFor="exampleFormControlInput1">Apellido</label> */}
+                <form className='register-input' onSubmit={register}>                       
+                    <div className="mb-3">                        
+                        <input className="form-control" id="exampleFormControlInput1" required placeholder="NOMBRE"  onChange={ev => setNombre(ev.target.value)}/>
+                    </div>        
+                    <div className="mb-3">                       
                         <input className="form-control" id="exampleFormControlInput2" placeholder="APELLIDO" required onChange={ev => setApellido(ev.target.value)}/>
                     </div>
-
-                    <div className="form-group">
-                        {/* <label htmlFor="exampleFormControlInput1">Email</label> */}
+                    <div className="mb-3">                        
                         <input className="form-control" id="exampleFormControlInput3" placeholder="CORREO" required onChange={ev => setEmail(ev.target.value)}/>
                     </div>
-
-                    <div className="form-group">
+                    <div className="mb-3">
                         <input className="form-control" id="exampleFormControlInput4" placeholder="TELEFONO" required onChange={ev => setTelefono(ev.target.value)}/>
                     </div>
-
-                    <div className="form-group">
+                    <div className="mb-3">
                         <input className="form-control" id="exampleFormControlInput5" placeholder="RUT" required onChange={ev => setRut(ev.target.value)}/>
                     </div>
-
-                    <div className="form-group">
-                        <input type="password" className="form-control" id="exampleFormControlInput5" placeholder="CLAVE" required onChange={ev => setClave(ev.target.value)}/>
+                    <div className="mb-3">
+                        <input type="password" className="form-control" id="exampleFormControlInput6" placeholder="CLAVE" required onChange={ev => setClave(ev.target.value)}/>
                     </div>
-
-                    <div className="form-group">
-                        <input type="password" className="form-control" id="exampleFormControlInput5" placeholder="REPITE LA CLAVE" required onChange={ev => setClaveConfirm(ev.target.value)}/>
+                    <div className="mb-3">
+                        <input type="password" className="form-control" id="exampleFormControlInput7" placeholder="REPITE LA CLAVE" required onChange={ev => setClaveConfirm(ev.target.value)}/>
                     </div>
-
                     <div className='register-button-out'>
                         <button type="submit" className='register-button'>REGISTRAR</button>
                     </div>
-            </form>
-        </div>
+                </form>
+            </div>
     );
 }
 

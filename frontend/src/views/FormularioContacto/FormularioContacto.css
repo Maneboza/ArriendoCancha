@@ -1,3 +1,42 @@
 .form-label{
   color: whitesmoke;
 }
+
+
+div.container.py-2{
+  
+  background-color: rgb(13, 13, 13, 0.618);
+  padding: 8rem;
+  color: whitesmoke;
+  border-radius: 50px;
+  box-shadow: 1rem;
+  margin-top: 6rem;
+  
+}
+
+form.form-center{
+  margin: 2rem;
+}
+
+button.contact-button{
+  background-color: #a6a6a6;
+  border-radius: 50px;
+  height: 1.8rem;
+  width: 8rem;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  border-style: none;
+  border-radius: 50px;
+  margin-left: 30rem; 
+  
+}
+
+button.contact-button:hover {
+  color: black;
+  background-color: #eefb03;
+  font-weight: bold;
+  text-decoration: none;
+
+}

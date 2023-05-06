@@ -89,7 +89,7 @@ const Home = () => {
 
                 <div className="contact-box">
                     <Link to='/formulario/crear'>
-                        <button>CONTACTANOS</button>
+                        <button className="btn-contacto">CONTACTANOS</button>
                     </Link>
                     <div>
                         <p className="contact-text">HORARIOS. Lunes a Domingo de 08:00 a 20:00 horas ; TELÉFONO. 222072311 ; DIRECCIÓN. Cerro Colorado 4661</p>
