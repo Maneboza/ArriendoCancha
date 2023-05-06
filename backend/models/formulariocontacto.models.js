@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 
 const FormularioSchema = new mongoose.Schema({
 
-    
     nombre: {
         type: String,
         required: [true, "El nombre es requerido"],
@@ -19,7 +18,6 @@ const FormularioSchema = new mongoose.Schema({
         required:  [true, "El mensaje es requerido"],
         minlength: [5, "Debe tener mínimo 5 caracteres"]
     },
-   
     
 }, {timestamps: true});
 
