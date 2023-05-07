@@ -36,7 +36,7 @@ const DetalleProfesores = () => {
               <p><strong>Recomendación:</strong> {DetalleProfesores.recomendacion}</p>
               <p><strong>Descripción:</strong> {DetalleProfesores.descripcion}</p>
               <Link to='/profesor/listar'>
-              <button>Volver</button>
+              <button className="btn-back" > Volver </button>
               </Link>
             </div>
           }

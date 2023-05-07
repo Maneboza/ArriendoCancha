@@ -1,5 +1,5 @@
 div.container.py-4{
-  
+
     background-color: rgb(13, 13, 13, 0.618);
     padding: 2rem;
     color: whitesmoke;
@@ -9,13 +9,13 @@ div.container.py-4{
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .form-control {
-  margin: 1rem;
-  }
-  
-  button.submit-button {
+.form-control {
+    margin: 1rem;
+}
+
+button.submit-button {
     background-color: #a6a6a6;
     border-radius: 50px;
     height: 1.8rem;
@@ -27,13 +27,12 @@ div.container.py-4{
     border-style: none;
     border-radius: 50px;
     margin-left: 30rem; 
-    
-  }
-  
-  button.submit-button:hover {
+
+}
+
+button.submit-button:hover {
     color: black;
     background-color: #eefb03;
     font-weight: bold;
     text-decoration: none;
-  
-  }
+}

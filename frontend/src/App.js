@@ -1,5 +1,4 @@
 import { BrowserRouter,  Route, Routes } from 'react-router-dom';
-import './App.css';
 import ListarProfesores from './views/Profesores/ListarProfesores';
 import DetalleProfesores from './views/Profesores/ProfesoresId';
 import {NavBarMenu} from './components/NavBarMenu/NavBarMenu';

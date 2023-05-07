@@ -4,14 +4,14 @@
 
 
 div.container.py-2{
-  
+
   background-color: rgb(13, 13, 13, 0.618);
   padding: 8rem;
   color: whitesmoke;
   border-radius: 50px;
   box-shadow: 1rem;
   margin-top: 6rem;
-  
+
 }
 
 form.form-center{
@@ -30,7 +30,7 @@ button.contact-button{
   border-style: none;
   border-radius: 50px;
   margin-left: 30rem; 
-  
+
 }
 
 button.contact-button:hover {

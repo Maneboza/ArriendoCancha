@@ -12,41 +12,36 @@
     z-index: -1;
 }
 
-
 .event-text-box{
-    
-    align-content: center;
-    margin-right: 2rem;
+    height: 80px;
+    display: flex;
+    justify-content: center;
     padding: 1rem;
 }
 
 .tittle-event{
     color: white;
+    font-weight: 900!important;
 }
 
-/* .logo-event{
-    height: 4rem;
-    object-fit: cover;
-} */
-
-div.event-box{
+.event-box{
     height: 160px;
+    width: 700px;
     color: white;
     display: flex;
     justify-content:center;
     align-items: center;
     font-size:small;
-    margin: 1rem;
-    border-color: gray;
-    border-style: double;
     border-radius: 30px;
     padding: 1rem;
     background-color: rgba(124, 124, 124, 0.618);
+    margin-bottom: 1rem;
+    margin-left: 4rem;
 }
 
 .img-event{
     clip-path: circle();
-    width: 10rem;
+    width: 18rem;
     object-fit: cover;
 }
 
@@ -54,6 +49,7 @@ div.event-box{
     justify-content: center;
     align-items: center;
     margin-left: 1rem;
+
 }
 
 .btn-box{
@@ -62,13 +58,12 @@ div.event-box{
 }
 .reserve-boxes{
     color: white;
-    width: 300px;
-    height: 250px;
+    height: 230px;
+    width: 500px;
     padding: 2rem 2rem;
     background-color: rgba(13, 13, 13, 0.618);
     border-radius: 50px;
-    margin-top: 6rem;
-    margin-right: 4rem;
+    margin-top: 5rem;
 }
 
 .btn-plan{
@@ -80,10 +75,7 @@ div.event-box{
     border-radius: 50px;
     border-style: none;
     font-weight: bold;
-    margin-right: 80rem;
-    margin-top: 4rem;
 }
-
 
 
 /* body{
@@ -107,14 +99,14 @@ div.event-box{
     background-blend-mode: luminosity;
 } */
 
-.container{
+/* .container{
     margin-top: 2rem;
     margin-bottom: 2rem;
-}
+} */
+
 
 .btn {
     position: relative;
-    width: 120px;
     height: 40px;
     line-height: 60px;
     text-align: center;
@@ -124,6 +116,7 @@ div.event-box{
     font-weight:800;
     font-size:17px;
     letter-spacing: 0.045em;
+    margin-top: 2rem;
 }
 
 .btn svg {
@@ -158,55 +151,74 @@ div.event-box{
     stroke-dashoffset: 437;
 }
 
-.contact-box{
-        color: white;
-        width: 280px;
-        height: 180px;
-        padding: 1.5rem 1.5rem;
-        background-color: rgba(13, 13, 13, 0.618);
-        border-radius: 50px;
-        margin-top: 1rem;
+.contact-box {
+    color: white;
+    width: 500px;
+    height: 160px;
+    padding: 1.5rem 1.5rem;
+    background-color: rgba(13, 13, 13, 0.618);
+    border-radius: 50px;
+    margin-top: 2rem;
 }
 
 .contact-tittle {
     font-weight: lighter;
 }
 .contact-text{
-    font-size:x-small;
+    padding-top: 0.5rem;
+    font-size:small;
 }
 
 .red-logo{
-    height: 2.5rem;
+    height: 3rem;
 }
 
-h4{
-    text-align: center;
-}
-
-h3 {
+/* h3 {
     padding: 1rem;
     margin-left: 13rem;
+} */
+
+/* button{
+border-radius: 20px;
+text-transform: none;
+background-color: yellow;
+padding: 0.5rem;
+} */
+
+.mini-text-box {
+    margin-top: 1rem;
+    font-size: unset;
 }
 
-button.btn-contacto{
-    background-color: #a6a6a6;
-    border-radius: 50px;
+.link-new {
+    color: white;
+}
+
+.btn-contact {
     height: 1.8rem;
     width: 8rem;
-    text-decoration: none;
-    justify-content: center;
-    align-items: center;
+    font-size: small;
     color: black;
-    border-style: none;
+    background-color: white;
     border-radius: 50px;
-    margin-left: 1rem; 
+    border-style: none;
+    font-weight: bold;
 }
 
+.btn-plan-box {
+    color: white;
+    width: 500px;
+    height: 70px;
+    padding: 1.5rem 1.5rem;
+    background-color: rgba(137, 137, 137, 0.214);
+    border-radius: 50px;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
 
-
-button.btn-contacto:hover {
-    color: black;
-    background-color: #eefb03;
-    font-weight: bold;
-    text-decoration: none;
+.imgs-reserva {
+    width: 6rem;
+    object-fit: cover;
+  
 }

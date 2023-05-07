@@ -34,29 +34,29 @@ const LoginForm = () => {
 
     });
 
-    
-      setEmail('');
-      setClave('');
-      setError('');
+
+        setEmail('');
+        setClave('');
+        setError('');
+        };
+
+        return (
+        <div className="container py-4">
+        <form className="login-form" onSubmit={handleSubmit}>
+            <img className="bg-img" src={bgImage} alt="Bg" />
+            <div className="mb-3">
+            <input className="form-control" id="email" placeholder="EMAIL" value={email} onChange={(e) => setEmail(e.target.value)} />
+            </div>
+            <div className="mb-3">
+            <input type="password"className="form-control" id="password" placeholder="CLAVE" value={clave} onChange={(e) => setClave(e.target.value)} />
+            </div>
+            {error && <div>{error}</div>}
+            <div className='register-button-out'>
+            <button className="submit-button" type="submit">Iniciar Sesión</button>
+            </div>
+        </form>
+        </div>
+        );
     };
-  
-    return (
-      <div className="container py-4">
-      <form className="login-form" onSubmit={handleSubmit}>
-        <img className="bg-img" src={bgImage} alt="Bg" />       
-        <div className="mb-3">
-        <input className="form-control" id="email" placeholder="EMAIL" value={email} onChange={(e) => setEmail(e.target.value)} />
-        </div>     
-        <div className="mb-3">
-        <input type="password"className="form-control" id="password" placeholder="CLAVE" value={clave} onChange={(e) => setClave(e.target.value)} />
-        </div>
-          {error && <div>{error}</div>}
-        <div className='register-button-out'>
-        <button className="submit-button" type="submit">Iniciar Sesión</button>
-        </div>
-      </form>
-      </div>
-    );
-  };
-  
-  export default LoginForm;
+
+    export default LoginForm;
