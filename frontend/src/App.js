@@ -14,7 +14,18 @@ import StepperClases from './components/StepperClases/StepperClases';
 import LoginForm from './views/Login/Login';
 import Formulario from './views/FormularioContacto/FormularioContacto';
 
+import { useState, useEffect } from 'react';
+import io from "socket.io-client"
+
 function App() {
+
+    const [socket] = useState(io(":8000"));
+
+    useEffect (() => {
+      console.log("Is this running?");
+      socket.on("Bienvenido", data => console.log(data))
+    }, []);
+
   return (
     <div>       
     <BrowserRouter>

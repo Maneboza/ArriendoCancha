@@ -7,8 +7,9 @@ module.exports.index = (request, response) => {
     });
 }
 
+
 module.exports.crearFormulario = async (request, response) => {
-    var requestData = request.body;
+    const requestData = request.body;
     try {
         var newUser = await FormularioModel.create(requestData);    
         response.json(newUser);
@@ -17,6 +18,7 @@ module.exports.crearFormulario = async (request, response) => {
         response.json(error);
     }
 }
+
 
 module.exports.encontrarFormularioId = async (request, response) => {
     const id = request.params.id;

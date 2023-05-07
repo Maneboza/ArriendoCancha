@@ -1,5 +1,5 @@
 const UsuariosModel =  require("../models/usuarios.models");
-
+const bcrypt = require('bcrypt');
 
 module.exports.index = (request, response) => {
     response.json({
@@ -9,9 +9,10 @@ module.exports.index = (request, response) => {
 
 module.exports.crearUsuario = async (request, response) => {
     console.log("request",request)
-    var requestData = request.body;
+    const requestData = request.body;
+    const clave = await bcrypt.hash(clave, 10)
     try {
-        var newUser = await UsuariosModel.create(requestData);    
+        const newUser = await UsuariosModel.create(requestData);    
         response.json(newUser);
     } catch(error) {
         console.log("no se pudo crear el usuario", error)

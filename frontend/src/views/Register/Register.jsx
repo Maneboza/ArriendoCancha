@@ -47,19 +47,19 @@ const Register = () => {
             <img className="bg-img" src={bgImage} alt="Bg" />
                 <form className='register-input' onSubmit={register}>                       
                     <div className="mb-3">                        
-                        <input className="form-control" id="exampleFormControlInput1" required placeholder="NOMBRE"  onChange={ev => setNombre(ev.target.value)}/>
+                        <input type='text' className="form-control" id="exampleFormControlInput1" required placeholder="NOMBRE"  onChange={ev => setNombre(ev.target.value)}/>
                     </div>        
                     <div className="mb-3">                       
-                        <input className="form-control" id="exampleFormControlInput2" placeholder="APELLIDO" required onChange={ev => setApellido(ev.target.value)}/>
+                        <input type='text' className="form-control" id="exampleFormControlInput2" placeholder="APELLIDO" required onChange={ev => setApellido(ev.target.value)}/>
                     </div>
                     <div className="mb-3">                        
-                        <input className="form-control" id="exampleFormControlInput3" placeholder="CORREO" required onChange={ev => setEmail(ev.target.value)}/>
+                        <input type='email' className="form-control" id="exampleFormControlInput3" placeholder="CORREO" required onChange={ev => setEmail(ev.target.value)}/>
                     </div>
                     <div className="mb-3">
-                        <input className="form-control" id="exampleFormControlInput4" placeholder="TELEFONO" required onChange={ev => setTelefono(ev.target.value)}/>
+                        <input type='number' className="form-control" id="exampleFormControlInput4" placeholder="TELEFONO" required onChange={ev => setTelefono(ev.target.value)}/>
                     </div>
                     <div className="mb-3">
-                        <input className="form-control" id="exampleFormControlInput5" placeholder="RUT" required onChange={ev => setRut(ev.target.value)}/>
+                        <input type='text'  className="form-control" id="exampleFormControlInput5" placeholder="RUT" required onChange={ev => setRut(ev.target.value)}/>
                     </div>
                     <div className="mb-3">
                         <input type="password" className="form-control" id="exampleFormControlInput6" placeholder="CLAVE" required onChange={ev => setClave(ev.target.value)}/>
