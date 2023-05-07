@@ -1,51 +1,50 @@
-import "./Calendario.css";
-import axios  from "axios";
-import React, { useState,  useEffect } from "react";
+import React, { useState, useEffect } from 'react';
+import Calendar from 'react-calendar';
+import axios from 'axios';
+import 'react-calendar/dist/Calendar.css';
+import { format, isBefore, startOfHour, addHours } from 'date-fns';
 
-    export const Horas = () => {
+function App() {
+    const [bloquesHorarios, setBloquesHorarios] = useState([]);
 
-    const [Horas, sethoras] = useState([{}]);
+    useEffect(() => {
+        axios.get('/cancha/:id/disponibilidad') // Otra ruta en el backend para obtener los bloques de horas
+        .then(response => {
+            setBloquesHorarios(response.data.map(bloque => ({
+            // idCancha, start, end
+            })));
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    }, []);
 
-            useEffect(() => {
-                console.log(" ");
-                axios.get("http://localhost:8000/cancha/:id/disponibilidad/").then(result => {
-                    console.log(result.data);
-                    sethoras(result.data);
-                });
-                }, []); 
+    const handleDateClick = date => {
+        const horaInicio = format(date, 'yyyy-MM-dd HH:mm:ss');
+        const horaFin = format(addHours(date, 1), 'yyyy-MM-dd HH:mm:ss');
+        // Enviar solicitud POST al servidor para reservar el bloque de horario
+        // utilizando fetch o axios
+    };
+
+    const tileDisabled = ({ activeStartDate, date, view }) => {
+        if (view !== 'month') {
+        return false;
+        }
+        const horaInicio = format(startOfHour(date), 'yyyy-MM-dd HH:mm:ss');
+        const bloqueHorario = bloquesHorarios.find(bloque => format(bloque.date, 'yyyy-MM-dd HH:mm:ss') === horaInicio);
+        return !bloqueHorario || !bloqueHorario.disponible || isBefore(date, new Date());
+    };
 
     return (
         <div>
-                <div className='calentario-canchas'>
-
-                        <h5>Selecciona un día y la hora:</h5>
-                        <label for="month">Mes :</label>
-                        <select name="month" id="month">
-                        <option value="mayo">Mayo</option>
-                        <option value="junio">Junio</option>
-                        <option value="julio">Julio</option>
-                        </select>
-                    <div className="row">       
-                        <div className="col">          
-                            {Horas.map((item, index) =>                   
-                                <div key={index} className="horarios">      
-                                    <div class="container text-center">
-                                        <div class="row row-cols-auto">
-                                            <div class="col">{item.start}</div>
-                                            <div class="col">{item.end}</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            )}   
-                        </div>
-                    </div>
-                    <button type="submit" className=''>Agendar</button>
-                </div>
-
-
-
+        <h1>Calendario de Reservas</h1>
+        <Calendar
+            value={new Date()}
+            // tileDisabled={tileDisabled}
+            onClickDay={handleDateClick}
+        />
         </div>
     );
-};
+    }
 
-export default Horas;
+export default App;
