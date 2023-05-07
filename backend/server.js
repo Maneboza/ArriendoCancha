@@ -9,6 +9,9 @@ const CanchasModel = require("./models/canchas.models");
 const Usuarios= require("./models/usuarios.models");
 const Formulario= require("./models/formulariocontacto.models")
 const cors = require("cors");
+const Cancha = require("./models/canchas.models")
+const Reserva = require ("./models/reservas-canchas.model")
+const DisponibilidadCanchas = require ("./models/disponibilidad-canchas.models")
 
 
 mongoose.connect("mongodb://0.0.0.0:27017/Clubensignabd", {
@@ -42,7 +45,7 @@ LoginRoutes (app);
 AdminJS.registerAdapter(AdminJSMongoose)
 
 const adminJS = new AdminJS({
-    resources: [Profesores, CanchasModel, Usuarios, Formulario ], //ClaseModel
+    resources: [Profesores, CanchasModel, Usuarios, Formulario, Cancha, Reserva, DisponibilidadCanchas ],
     rootPath: '/admin'
 })
 //const adminRouter = AdminJSExpress.buildRouter(adminJS)

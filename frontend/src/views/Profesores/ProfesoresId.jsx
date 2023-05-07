@@ -38,6 +38,9 @@ const DetalleProfesores = () => {
               <Link to='/stepper'>
                 <button>Agendar</button>
               </Link>
+              <Link to='/profesor/listar'>
+          <button>Volver</button>
+        </Link>
 
             </div>
           }
@@ -45,9 +48,7 @@ const DetalleProfesores = () => {
 
       </div>
       <div>
-        <Link to='/stepper'>
-          <button>Volver</button>
-        </Link>
+      
       </div>
     </div>
 

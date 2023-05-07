@@ -22,7 +22,7 @@ const connectToMongo = async () => {
 };
 
 const rellenarDB = async () => {
-  const idCancha = "6455c5d29baeacd824287a8f"; // cancha: "los lagos"
+  const idCancha = "64567e921b1a68d4e02df1df"; // cancha: "los lagos"
 
   const startDate = new Date();
   const endDate = addMonths(startDate, 3);

@@ -14,14 +14,14 @@ const ListarProfesores = () => {
     console.log("Inicio el componente");
     axios.get("http://localhost:8000/profesor/listar").then(result => {
       console.log(result.data);
-      setListaProfesores(result.data);
+      setListaProfesores(result.data);            
     });
   }, []);
 
+
   return (
 
-    <div className="container text-center">
-      
+    <div className="container text-center">      
       <img className="bg-img" src={bgImage} alt="Bg" />
         <div className="row">       
           <div className="col">          
@@ -42,5 +42,5 @@ const ListarProfesores = () => {
     </div>
   );
 }
-
+  
 export default ListarProfesores;
