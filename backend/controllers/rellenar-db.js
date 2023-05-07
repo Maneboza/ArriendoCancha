@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const DisponibilidadCanchas = require("../models/disponibilidad-canchas.models");
 
 const {
-  addMonths,
+  addDays,
   eachDayOfInterval,
   addMinutes,
   isBefore,
@@ -25,7 +25,7 @@ const rellenarDB = async () => {
   const idCancha = "64567e921b1a68d4e02df1df"; // cancha: "los lagos"
 
   const startDate = new Date();
-  const endDate = addMonths(startDate, 3);
+  const endDate = addDays(startDate, 1);
   const blockDuration = 60;
   console.log("rango", { startDate, endDate });
 

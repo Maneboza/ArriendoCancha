@@ -11,28 +11,28 @@ const LoginForm = () => {
     const navigate = useNavigate() ;
 
     const handleSubmit = (event) => {
-        event.preventDefault();
+      event.preventDefault();
+  
+      if (!email) {
+        setError('El email es requerido');
+        return;
+      }
+  
+      if (!clave) {
+        setError('Password es requerido');
+        return;
+      }
+  
+      const resp =  axios.post(window.$api + 'usuarios/login',  {    
+            email, clave
 
-        if (!email) {
-            setError('El email es requerido');
-            return;
-        }
+     }).then((response) => {
+      
+      if( response.data.status === 'OK'  ) {  navigate('/')}
+      
+      if( response.data.status === 'NO OK'  ) {  alert("Usuario o Password incorrectas")}
 
-        if (!clave) {
-            setError('Password es requerido');
-            return;
-        }
-
-        const resp =  axios.post(window.$api + 'usuarios/login',  {
-                email, clave
-
-        }).then((response) => {
-
-        if( response.data.status === 'OK'  ) {  navigate('/')}
-
-        if( response.data.status === 'NO OK'  ) {  alert("Usuario o Password incorrectas")}
-
-        });
+    });
 
 
         setEmail('');

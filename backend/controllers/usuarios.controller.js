@@ -29,8 +29,8 @@ module.exports.encontrarUsuarioId = async (request, response) => {
 
 module.exports.loginUsuario = async (request, response) => {
     var requestBody = request.body;
-    var usuarioEncontrado = await UsuariosModel.findOne(requestBody);
-    console.log(usuarioEncontrado)
+     var usuarioEncontrado = await UsuariosModel.findOne(requestBody);
+     console.log(usuarioEncontrado)
     if(!usuarioEncontrado)
     {
         response.json({
@@ -41,5 +41,7 @@ module.exports.loginUsuario = async (request, response) => {
         response.json({
             "status": "OK"
         });
-    }
+
+    }    
+    
 }

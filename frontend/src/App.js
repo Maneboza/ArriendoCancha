@@ -10,7 +10,6 @@ import Register from './views/Register/Register';
 import Clases from './views/Clases/Clases';
 import Canchas from './views/Canchas/Canchas'
 import CalendarioClases from './components/CalendarioClases/CalendarioClases';
-import StepperClases from './components/StepperClases/StepperClases';
 import LoginForm from './views/Login/Login';
 import Formulario from './views/FormularioContacto/FormularioContacto';
 
@@ -40,7 +39,6 @@ function App() {
           <Route path='/canchas' element={<Canchas/>}/>
           <Route path='/canchas1' element={<CalendarioClases/>}/> 
           <Route path='/profesor/:id/reserva-clase/crear' element={<Clases/>}/>
-          <Route path='/stepper' element={<StepperClases/>}/>
           <Route path='/formulario/crear' element={<Formulario/>}/>
         </Routes>
       </BrowserRouter>

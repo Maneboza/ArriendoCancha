@@ -2,18 +2,6 @@
  background-color: #21272d;
 }
 
-button {
-
-    background-color:black;
-    color:aliceblue;
-    border-radius: 3px;
-    font-size: 1.3rem;
-    
-    padding-left: 1rem;
-    padding-right: 1rem;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
 .profesores{
 background-color: #21272d;
 }
@@ -29,3 +17,23 @@ img.card-img-center{
     
 }
 
+button.btn-back{ 
+    background-color: #a6a6a6;
+    border-radius: 50px;
+    height: 1.8rem;
+    width: 8rem;
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center;
+    color: black!important;
+    border-style: none;
+    border-radius: 50px;
+    margin-left: 1rem; 
+
+}
+
+button.btn-back:hover {
+    color: black;
+    background-color: #eefb03;
+    font-weight: bold;
+}
