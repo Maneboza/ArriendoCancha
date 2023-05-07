@@ -5,6 +5,7 @@ import React, { useState,  useEffect } from "react";
     export const Horas = () => {
 
     const [Horas, sethoras] = useState([{}]);
+    
 
             useEffect(() => {
                 console.log(" ");
@@ -17,7 +18,6 @@ import React, { useState,  useEffect } from "react";
     return (
         <div>
                 <div className='calentario-canchas'>
-
                         <h5>Selecciona un día y la hora:</h5>
                         <label for="month">Mes :</label>
                         <select name="month" id="month">
@@ -31,8 +31,8 @@ import React, { useState,  useEffect } from "react";
                                 <div key={index} className="horarios">      
                                     <div class="container text-center">
                                         <div class="row row-cols-auto">
-                                            <div class="col">{item.start}</div>
-                                            <div class="col">{item.end}</div>
+                                            <li key={item._id}>{index.idCancha} - {item.start}-{item.end}</li>
+                                            
                                         </div>
                                     </div>
                                 </div>

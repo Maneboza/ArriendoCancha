@@ -76,6 +76,10 @@ module.exports.buscarDisponibilidad = async (request, response) => {
   response.status(200).json(disponibilidades);
 };
 
+module.exports.disponibilidadTotal = async (request, response) => {
+  var result = await DisponibilidadCanchas.find();
+  response.json(result);
+}
 
 module.exports.crearReservaCancha = async (request, response) => {
   const { id } = request.params;
