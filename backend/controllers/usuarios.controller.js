@@ -29,12 +29,19 @@ module.exports.encontrarUsuarioId = async (request, response) => {
 module.exports.loginUsuario = async (request, response) => {
     
     var requestBody = request.body;
-    console.log("requestBody",requestBody)
-    // var usuarioEncontrado = await UsuariosModel.findOne({ email: "boza.marion@gmail.com", password: "12345678" });
-    var usuarioEncontrado = await UsuariosModel.findOne(requestBody);
-    console.log("usuarioEncontrado",usuarioEncontrado)
-    console.log(usuarioEncontrado);
-    response.json({
-        "status": "ok"
-    });
+     var usuarioEncontrado = await UsuariosModel.findOne(requestBody);
+     console.log(usuarioEncontrado)
+    if(!usuarioEncontrado)
+    {
+        response.json({
+            "status": "NO OK"
+        });
+    } else
+    {
+        response.json({
+            "status": "OK"
+        });
+
+    }    
+    
 }
