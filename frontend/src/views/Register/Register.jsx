@@ -44,7 +44,7 @@ const Register = () => {
             return
         }
         try {       
-            const resp = await axios.post('http://localhost:8000/usuarios/crear', {
+            const resp = await axios.post(window.$api + 'usuarios/crear', {
                 nombre,
                 apellido,
                 email,

@@ -11,6 +11,10 @@ div.container.py-4{
     align-items: center;
 }
 
+.py-4 {
+    padding-top: 3.5rem!important;
+    padding-bottom: 1.5rem!important;
+}
 .form-control {
     margin: 1rem;
 }

@@ -10,7 +10,7 @@ const ListarProfesores = () => {
 
   useEffect(() => {
     console.log("Inicio el componente");
-    axios.get("http://localhost:8000/profesor/listar").then(result => {
+    axios.get(window.$api + "profesor/listar").then(result => {
       console.log(result.data);
       setListaProfesores(result.data);
     });

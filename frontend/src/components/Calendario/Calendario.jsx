@@ -18,7 +18,7 @@ export const Horas = () => {
 
     useEffect(() => {
         console.log(" ");
-        axios.get("http://localhost:8000/cancha/disponibilidadtotal/").then(result => {
+        axios.get(window.$api + "cancha/disponibilidadtotal/").then(result => {
             console.log(result.data);
             sethoras(result.data);
         });
@@ -76,17 +76,13 @@ export const Horas = () => {
                                 <div key={item._id} >
                                     <input type="radio" name="opcion" value={item._id} onChange={ev =>setIdDispo(ev.target.value)} />
                                     <label>{moment(item.start).utc().format('HH:mm')}</label><br/>
-                                </div>
-                                
-                            )
-                            
-                            
-                            
+                                </div>                                
+                            )         
                             )}
                         </div>
                         <div className="mb-3">
                             <input className="form-control" id="Input1" data-sb-validations="required" placeholder="Numero transacción" required onChange={ev => setIdTransa(ev.target.value)} />
-                            <input className="form-control" id="Input2" data-sb-validations="required" placeholder="Correo Electrónico" required onChange={ev => setIdUsuario(ev.target.value)} />
+                            <input className="form-control" id="Input2" type="email" placeholder="Correo Electrónico" required onChange={ev => setIdUsuario(ev.target.value)} />
                             <div className='register-button-out'>
                                 <button className="reserve-button" type="submit">Reservar </button>
                             </div>

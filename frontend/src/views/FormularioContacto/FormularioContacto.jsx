@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 //import { useEffect } from "react";
-import bgImage from "../../imagenes/fondos/imgFondo8.png";
+import bgImage from "../../imagenes/fondos/imgFondo4.png";
 import axios from "axios";
 import '../FormularioContacto/FormularioContacto.css'
 import swal from "sweetalert";
@@ -17,7 +17,7 @@ const Formulario = () => {
     async function register (ev) {
         ev.preventDefault()
         try {
-        const resp = await axios.post('http://localhost:8000/formulario/crear', {
+        const resp = await axios.post(window.$api + 'formulario/crear', {
             nombre,email,mensaje
           })
         
@@ -35,7 +35,7 @@ const Formulario = () => {
 
 <div className="container py-2">
   <img className="bg-img" src={bgImage} alt="Bg" />
-    <form  action="https://formsubmit.co/boza.marion@gmail.com" method="POST" onSubmit={register}>    
+    <form className="form-center" method="POST" onSubmit={register}>    
       <div className="mb-3">     
         <input className="form-control" id="name" type="text" placeholder= "nombre" name="name"  data-sb-validations="required" required onChange={ev => setNombre(ev.target.value)}  />
         <div className="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
