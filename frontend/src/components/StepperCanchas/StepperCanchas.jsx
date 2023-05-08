@@ -76,21 +76,21 @@ export const StepperCanchas = () => {
         <CDBStepper direction="horizontal" showTitle={false} showTooltip={false}>
             <CDBStep
             id={1}
-            name="Basic Information"
+            name="Calendario"
             handleClick={() => handleNextPrevClick(1)}
             active={active}
             component={<Step1 handleNextPrevClick={handleNextPrevClick} />}
             />
             <CDBStep
             id={2}
-            name="Personal Data"
+            name="Comprobante de Pago"
             handleClick={() => handleNextPrevClick(2)}
             active={active}
             component={<Step2 handleNextPrevClick={handleNextPrevClick} />}
             />
             <CDBStep
             id={3}
-            name="Terms and Conditions"
+            name="Proceso Completado"
             handleClick={() => handleNextPrevClick(3)}
             active={active}
             component={<Step3 handleNextPrevClick={handleNextPrevClick} />}

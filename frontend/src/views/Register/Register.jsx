@@ -23,7 +23,7 @@ const Register = () => {
 
         //   const resp = await axios.post(window.$api + 'usuarios/crear', {
         console.log("register jsx")        
-        const resp = await axios.post('http://localhost:8000/usuarios/crear', {
+        const resp = await axios.post('http://localhost:8000/usuarios/registro', {
             nombre,apellido,email,telefono,rut,clave,claveConfirm
             })
           //const resp2 = await axios.post('http://localhost:8000/api/auth/login', {
@@ -36,8 +36,8 @@ const Register = () => {
           navigate('/')
         }
         catch(err){
-          alert(err.response.data.error)
-          return
+            alert(err.response.data.error)
+            return
         }
             
     }
