@@ -4,6 +4,7 @@ import { useState } from "react";
 import bgImage from "../../imagenes/fondos/imgFondo8.png";
 import axios from "axios";
 import '../FormularioContacto/FormularioContacto.css'
+import swal from "sweetalert";
 
 
 const Formulario = () => {
@@ -20,7 +21,7 @@ const Formulario = () => {
             nombre,email,mensaje
           })
         
-        alert("Formulario enviado de forma exitosa")
+        swal("Formulario enviado de forma exitosa")
         navigate('/')
         }
         catch(err){

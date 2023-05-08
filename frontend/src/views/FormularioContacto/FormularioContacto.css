@@ -1,9 +1,9 @@
-.form-label{
+.form-label {
   color: whitesmoke;
 }
 
 
-div.container.py-2{
+div.container.py-2 {
 
   background-color: rgb(13, 13, 13, 0.618);
   padding: 8rem;
@@ -14,11 +14,11 @@ div.container.py-2{
 
 }
 
-form.form-center{
+form.form-center {
   margin: 2rem;
 }
 
-button.contact-button{
+button.contact-button {
   background-color: #a6a6a6;
   border-radius: 50px;
   height: 1.8rem;
@@ -29,7 +29,7 @@ button.contact-button{
   color: black;
   border-style: none;
   border-radius: 50px;
-  margin-left: 30rem; 
+  margin-left: 30rem;
 
 }
 

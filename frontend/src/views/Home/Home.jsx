@@ -85,7 +85,7 @@ const Home = () => {
                                     <svg width="190" height="60">
                                         <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="180" height="40"></rect>
                                     </svg>
-                                    <span>CLASES</span>
+                                    <span>PROFESORES</span>
                                 </a>
                             </div>
                             

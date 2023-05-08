@@ -4,8 +4,6 @@ import { useParams, Link } from "react-router-dom";
 import bgImage from "../../imagenes/fondos/imgFondo6.png";
 
 
-
-
 const DetalleProfesores = () => {
   const [DetalleProfesores, setDetalleProfesores] = useState([{}]);
   const { id } = useParams()
@@ -21,14 +19,11 @@ const DetalleProfesores = () => {
   return (
     <div className="container text-center">
       <img className="bg-img" src={bgImage} alt="Bg" />
-      <div className="row">
-    
-        <div className="col">
-       
+      <div className="row">    
+        <div className="colprofesores">       
           {  
-            
-            <div className="profesores">
-             <img className="card-img-center" src={DetalleProfesores.imageURL} alt="teacherimage" style={{height:300}} /> 
+              <div className="profesores">
+              <img className="card-img-center" src={DetalleProfesores.imageURL} alt="teacherimage" style={{height:300}} /> 
               <p><strong>Nombre:</strong> {DetalleProfesores.nombre}</p>
               <p><strong>Edad:</strong> {DetalleProfesores.edad}</p>
               <p><strong>Días:</strong> {DetalleProfesores.dias}</p>
@@ -36,21 +31,16 @@ const DetalleProfesores = () => {
               <p><strong>Recomendación:</strong> {DetalleProfesores.recomendacion}</p>
               <p><strong>Descripción:</strong> {DetalleProfesores.descripcion}</p>
               <Link to='/profesor/listar'>
-              <button className="btn-back" > Volver </button>
+              <button className="backbutton" > Volver </button>
               </Link>
             </div>
           }
         </div>
-
       </div>
-      <div>
-      
+      <div>      
       </div>
     </div>
-
-
   );
-
 }
 
 export default DetalleProfesores; 

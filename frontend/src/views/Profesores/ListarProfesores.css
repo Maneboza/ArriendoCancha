@@ -1,11 +1,11 @@
-a.btn-page{ 
+a.btn-page {
     height: 3rem;
     width: 8rem;
-    font-size:large;
+    font-size: large;
     color: black;
     background-color: #eefb03;
     border-radius: 30px;
-    border-style:none;
+    border-style: none;
     font-weight: bold;
     margin-right: 24rem;
     margin-top: 4rem;
@@ -15,38 +15,38 @@ a.btn-page{
 
 }
 
-.col{
+.col {
     display: flex;
     background-color: rgb(13, 13, 13, 0.618);
     padding: 2rem;
     color: whitesmoke;
     border-radius: 50px;
     box-shadow: 1rem;
-    
+
 }
 
-.profilepic{
+.profilepic {
     border-radius: 40px;
-    
+
 }
 
 
-div.card{
+div.card {
     background-color: rgb(39, 37, 37);
     width: 55rem;
     height: 30rem;
-    
+
 
 }
 
-.logohombre{
+.logohombre {
     height: 10%;
 }
 
 img.teacherimage {
     height: 20rem;
     width: 40rem;
-    
-    
+
+
 
 }
