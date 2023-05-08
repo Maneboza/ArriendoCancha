@@ -2,24 +2,18 @@ const mongoose = require("mongoose");
 
 const ReservasSchema = new mongoose.Schema({
 	idUsuario:  {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'usuarios'
+        type: String,
+        
     },
 	
-	idCancha:  {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Cancha'
-    },
-
 	idDisponibilidad: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'DisponibilidadCanchas'
+       type: String, 
+       ref: 'DisponibilidadCanchas'
     },
 
 	codigoTransaccion: {
 		type: String,
-		required: true,
-        unique: true
+       unique: true
 	},
 
 }, {timestamps: true});
