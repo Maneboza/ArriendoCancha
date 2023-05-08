@@ -1,51 +1,42 @@
-.list-group-item {
-    user-select: none;
-  }
-  
-  .list-group input[type="checkbox"] {
-    display: none;
-  }
-  
-  .list-group input[type="checkbox"] + .list-group-item {
-    cursor: pointer;
-  }
-  
-  .list-group input[type="checkbox"] + .list-group-item:before {
-    content: "\2713";
-    color: transparent;
-    font-weight: bold;
-    margin-right: 1em;
-  }
-  
-  .list-group input[type="checkbox"]:checked + .list-group-item {
-    background-color: #0275D8;
-    color: #FFF;
-  }
-  
-  .list-group input[type="checkbox"]:checked + .list-group-item:before {
-    color: inherit;
-  }
-  
-  .list-group input[type="radio"] {
-    display: none;
-  }
-  
-  .list-group input[type="radio"] + .list-group-item {
-    cursor: pointer;
-  }
-  
-  .list-group input[type="radio"] + .list-group-item:before {
-    content: "\2022";
-    color: transparent;
-    font-weight: bold;
-    margin-right: 1em;
-  }
-  
-  .list-group input[type="radio"]:checked + .list-group-item {
-    background-color: #0275D8;
-    color: #FFF;
-  }
-  
-  .list-group input[type="radio"]:checked + .list-group-item:before {
-    color: inherit;
-  }
+div.col {
+    
+        display: flex;
+        background-color: rgb(13, 13, 13, 0.618);
+        padding: 2rem;
+        color: whitesmoke;
+        border-radius: 20px;
+        box-shadow: 1rem;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 10rem;
+}
+
+
+
+div.row {
+    display: flex;
+        background-color: rgb(13, 13, 13, 0.618);
+        padding: 2rem;
+        color: whitesmoke;
+        border-radius: 50px;
+        box-shadow: 1rem;
+        flex-direction: row;
+        justify-content: space-evenly;
+}
+
+
+div.calendario-canchas {
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-top: 5rem;
+}
+
+
+div.mb-3{
+    margin: 5rem;
+}
+
+
+input#input1.form-control{
+    margin: 5rem;
+}

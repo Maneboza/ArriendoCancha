@@ -34,7 +34,7 @@ const rellenarDB = async () => {
   const disponibilidades = [];
 
   dias.forEach((dia) => {
-    const startOfDay = new Date(dia.setHours(8));
+    const startOfDay = new Date(dia.setHours(13));
     const endOfDay = new Date(dia.setHours(21));
 
     let startTime = startOfDay;

@@ -2,7 +2,7 @@ const CanchasModel = require("../models/canchas.models");
 const DisponibilidadCanchas = require("../models/disponibilidad-canchas.models");
 const Reserva = require("../models/reservas-canchas.model")
 const dateFns = require("date-fns");
-const mongoose = require("mongoose"); 
+const mongoose = require("mongoose");
 
 
 module.exports.crearCancha = async (request, response) => {
@@ -69,7 +69,7 @@ module.exports.buscarDisponibilidad = async (request, response) => {
 
   const disponibilidades = await DisponibilidadCanchas.find({
     idCancha: id,
-    start: { $gte: dateFns.startOfDay(date) }, 
+    start: { $gte: dateFns.startOfDay(date) },
     end: { $lte: dateFns.endOfDay(date) },
   });
 
@@ -82,23 +82,21 @@ module.exports.disponibilidadTotal = async (request, response) => {
 }
 
 module.exports.crearReservaCancha = async (request, response) => {
-  const { id } = request.params;
-  const { idDisponibilidad, codigoTransaccion } = request.body;
+const {idUsuario, idDisponibilidad, codigoTransaccion} = request.body;
 
-  const cancha = await CanchasModel.findById(id);
+  // const cancha = await CanchasModel.findById(id);
 
-  if (!cancha) {
-    return response.status(404).json({ error: "La cancha no existe" });
-  }
+  // if (!cancha) {
+  //   return response.status(404).json({ error: "La cancha no existe" });
+  // }
 
-  
-  const disponibilidad = await DisponibilidadCanchas.findById(idDisponibilidad);
+  // const disponibilidad = await DisponibilidadCanchas.findById(idDisponibilidad);
 
-  if (!disponibilidad) {
-    return response
-      .status(409)
-      .json({ error: "La disponibilidad ya no existe" });
-  }
+  // if (!disponibilidad) {
+  //   return response
+  //     .status(409)
+  //     .json({ error: "La disponibilidad ya no existe" });
+  // }
 
   try {
     /* 
@@ -107,13 +105,13 @@ module.exports.crearReservaCancha = async (request, response) => {
     */
     const session = await mongoose.connection.startSession()
     session.startTransaction();
-
-    const nuevaReserva = await Reserva.create({
-      idCancha: id,
+  
+    const nuevaReserva = await Reserva.create({ 
       idDisponibilidad,
       codigoTransaccion,
-      idUsuario: '6450324db5a5b800f3798778'// TODO: deberia salir del jwt token de autenticacion   // "Juan lira"
+      idUsuario: idUsuario//'6450324db5a5b800f3798778'// TODO: deberia salir del jwt token de autenticacion   // "Juan lira"
     });
+
     await DisponibilidadCanchas.findOneAndDelete({ _id: idDisponibilidad });
     response.status(200).json(nuevaReserva);
   } catch (error) {

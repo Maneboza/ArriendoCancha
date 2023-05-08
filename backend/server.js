@@ -45,7 +45,7 @@ LoginRoutes (app);
 AdminJS.registerAdapter(AdminJSMongoose)
 
 const adminJS = new AdminJS({
-    resources: [Profesores, CanchasModel, Usuarios, Formulario, Cancha, Reserva, DisponibilidadCanchas ],
+    resources: [Profesores, CanchasModel, Usuarios, Formulario, Cancha, DisponibilidadCanchas, Reserva ],
     rootPath: '/admin'
 })
 //const adminRouter = AdminJSExpress.buildRouter(adminJS)
