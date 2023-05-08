@@ -72,6 +72,7 @@ const adminRouter = AdminJSExpress.buildAuthenticatedRouter(
 
 app.use(adminJS.options.rootPath, adminRouter);
 
-app.listen(8000, () => {
+const server = app.listen(8000, () => {
     console.log("Listening at Port 8000")
 })
+

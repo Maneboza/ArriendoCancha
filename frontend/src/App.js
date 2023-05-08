@@ -13,8 +13,12 @@ import CalendarioClases from './components/CalendarioClases/CalendarioClases';
 import LoginForm from './views/Login/Login';
 import Formulario from './views/FormularioContacto/FormularioContacto';
 
+
+
 function App() {
-  return (
+   
+
+    return (
     <div>       
     <BrowserRouter>
       <NavBarMenu/>   
